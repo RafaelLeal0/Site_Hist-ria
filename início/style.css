@@ -1,0 +1,30 @@
+*{
+    font-family:Calibri;
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.container{
+    background-color: black;
+}
+
+img{
+    filter: brightness(50%);
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+h1{
+    font-size: larger;
+    display: flex;
+    color: rgb(183, 174, 110);
+}
