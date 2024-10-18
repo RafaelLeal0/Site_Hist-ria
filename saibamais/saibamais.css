@@ -44,7 +44,6 @@ video {
     object-fit: cover;
 }
 
-/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #1f1f1f;
@@ -100,19 +99,17 @@ video {
     z-index: 1002;
 }
 
-/* Cards container for scrolling */
 .cards-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
     height: 100vh;
-    width: calc(100vw - 250px); /* Ajusta para não sobrepor o sidebar */
+    width: calc(100vw - 250px); 
     margin-left: 250px;
     padding: 20px;
 }
 
-/* Sections */
 .new-section, .new-section2, .new-section3, .new-section4, .new-section5 {
     position: relative;
     padding: 20px;
@@ -155,7 +152,6 @@ video {
     z-index: 2;
 }
 
-/* Section-specific background images */
 .new-section {
     background-image: url('historiaantiga.jpeg');
 }
@@ -175,7 +171,7 @@ video {
 .new-section5 {
     background-image: url('idadecontenporanea.jpg');
 }
-/* Sections */
+
 .new-section, .new-section2, .new-section3, .new-section4, .new-section5 {
     position: relative;
     padding: 20px;
@@ -188,13 +184,13 @@ video {
     overflow-y: auto;
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra padrão */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .new-section:hover, .new-section2:hover, .new-section3:hover, .new-section4:hover, .new-section5:hover {
-    transform: scale(1.05); /* Aumenta o card em 5% */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra maior ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
 
 .new-section::after, .new-section2::after, .new-section3::after, .new-section4::after, .new-section5::after {
@@ -227,4 +223,15 @@ video {
 .footer-placeholder {
     height: 200px;
     background-color: transparent;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+img{
+    height: 70px;
+    width: 130px;
+    margin-top: 100px;
+    margin-left: 30px;
 }

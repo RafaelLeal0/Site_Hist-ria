@@ -47,10 +47,18 @@ body::before {
     background-color: rgba(0, 0, 0, 0.7); 
 }
 
+.left-section h1{
+    margin-left: 40px;
+    margin-top: -0px;
+}
 
-.left-section h1 {
+#bem{
+    margin-left: 100px;
+}
+
+.left-section h2 {
     font-size: 2.5em;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
@@ -95,7 +103,7 @@ body::before {
     border-radius: 5px;
 }
 
-button {
+.button1 {
     width: 100%;
     padding: 10px;
     background-color: black;
@@ -105,8 +113,35 @@ button {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
-button:hover {
+.button1:hover {
     background-color: #333;
+}
+
+.button2 {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+
+.button2:hover {
+    background-color: #333;
+}
+
+img{
+    height: 170px;
+    width: 310px;   
+    margin-left: 60px;
+    margin-top: 30px;
 }
