@@ -56,31 +56,17 @@ body::before {
     margin-left: 100px;
 }
 
-.left-section h2 {
-    font-size: 2.5em;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
-}
-
-.left-section p {
-    margin-left: 30px;
-    font-size: 1.2em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.right-section {
-    flex: 1;
+.section {
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    padding: 65px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px; 
 }
 
-.right-section h2 {
+.section h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
@@ -93,6 +79,7 @@ body::before {
 
 .input-container {
     margin-bottom: 20px;
+    margin-right: 30px;
 }
 
 .input-container input {
@@ -103,7 +90,7 @@ body::before {
     border-radius: 5px;
 }
 
-button[name="login"] {
+button[name="cadastro"] {
     background-color: #684646;
     color: white;
     font-size: 18px;
@@ -114,7 +101,7 @@ button[name="login"] {
     transition: background-color 0.3s ease;
 }
 
-button[name="login"]:hover {
+button[name="cadastro"]:hover {
     background-color: #452929;
 }
 

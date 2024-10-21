@@ -1,33 +1,41 @@
 <?php
-session_start();
-include 'conexao.php';
+include'conexao.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user = $_POST['user'];
-    $password = $_POST['password'];
+if(isset($_POST['login'])){
     $email = $_POST['email'];
+    $senha = md5($_POST['senha']);
 
-    $query = "SELECT * FROM usuarios WHERE nome_usuario = ? AND senha_usuario = ?";
-    $stmt = $connection->prepare($query);
-    $stmt->bind_param("ss", $user, $password);
-
+    $stmt = $connection->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
+    $stmt->bind_param("ss", $email, $senha);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $usuario_logado = $result->fetch_assoc();
-        $_SESSION['usuario_sessao'] = $usuario_logado['username'];
-        $_SESSION['tipo_sessao'] = $usuario_logado['type'];
-        
-        header("Location: ./inicio/incio.html");
-        exit();
+    if($result->num_rows > 0){
+        $user = $result->fetch_assoc();
+        $_SESSION['usuario'] = $user['tipo'];
+        header("Location: inicio.php");
     } else {
-        echo "Usuário ou senha incorretos";
+        echo "
+        <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+        <script>
+            swal({
+                title: 'Erro!',
+                text: 'E-mail ou senha incorretos.',
+                icon: 'error',
+                button: 'Tentar novamente',
+            });
+        </script>
+        <script>
+            window.location.href = 'index.php';
+        </script>
+        ";
     }
+
 
     $stmt->close();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -45,18 +53,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="right-section">
             <h2>Crie uma conta</h2>
-            <form method="POST" action=""> 
-                <div class="input-container">
-                    <input type="text" name="user" placeholder="Nome" required>
-                </div>
+            <form method="POST" action="index.php"> 
                 <div class="input-container">
                     <input type="email" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="input-container">
-                    <input type="password" name="password" placeholder="Senha" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
                 </div>
-                <button type="submit">Entrar</button>
+                <button type="submit" name="login">Entrar</button>
             </form>
+            <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
+
         </div>
     </div>
 </body>
