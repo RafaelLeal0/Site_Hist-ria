@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($result->num_rows > 0){
         $user = $result->fetch_assoc();
         $_SESSION['usuario'] = $user['tipo'];
-        header("Location: inicio.php");
+        header("Location: ./inicio/inicio.php");
     } else {
         echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
         echo "<script>

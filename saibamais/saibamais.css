@@ -153,23 +153,23 @@ video {
 }
 
 .new-section {
-    background-image: url('historiaantiga.jpeg');
+    background-image: url('../imagens/historiaantiga.jpeg');
 }
 
 .new-section2 {
-    background-image: url('historia.jpeg');
+    background-image: url('../imagens/historia.jpeg');
 }
 
 .new-section3 {
-    background-image: url('idade\ média.jpg');
+    background-image: url('../imagens/idade\ média.jpg');
 }
 
 .new-section4 {
-    background-image: url('idademoderna.jpg');
+    background-image: url('../imagens/idademoderna.jpg');
 }
 
 .new-section5 {
-    background-image: url('idadecontenporanea.jpg');
+    background-image: url('../imagens/idadecontenporanea.jpg');
 }
 
 .new-section, .new-section2, .new-section3, .new-section4, .new-section5 {
