@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: auto;
+}
+
+img {
+    height: 70px;
+    width: 130px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: left 0.3s ease;
+    z-index: 1001;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 60px;
+    color: #ffffff;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #c0b095;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+}
+
+.histantiga {
+    padding: 20px;
+    margin-left: 250px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.antiga-background {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.antiga img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.prehistoria-section-custom {
+    position: relative;
+    z-index: 2;  /* Garante que o conteúdo apareça acima do vídeo */
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;  /* Garante que o vídeo fique atrás do conteúdo */
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
