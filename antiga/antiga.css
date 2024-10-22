@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh;
     overflow: auto;
+    color: #ffffff;
 }
 
 img {
@@ -47,12 +48,10 @@ img {
     padding: 0;
     width: 100%;
     margin-top: 60px;
-    color: #ffffff;
 }
 
 .sidebar ul li {
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 .sidebar ul li a {
@@ -79,34 +78,6 @@ img {
     z-index: 1002;
 }
 
-.histantiga {
-    padding: 20px;
-    margin-left: 250px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.antiga-background {
-    margin: 10px 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-}
-
-.antiga img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    max-width: 100%;
-}
-
-.prehistoria-section-custom {
-    position: relative;
-    z-index: 2;  /* Garante que o conteúdo apareça acima do vídeo */
-    padding: 20px;
-    margin-left: 250px;
-}
-
 .video-container {
     position: fixed;
     top: 0;
@@ -114,7 +85,7 @@ img {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;  /* Garante que o vídeo fique atrás do conteúdo */
+    z-index: -1;  
 }
 
 video {
@@ -127,4 +98,52 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+    margin-left: 270px;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: 100px;
+    height: 100%;
+}
+
+.card img {
+    display: block;
+    width: 70%; 
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.text-content {
+    margin-top: 20px;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1{
+    text-align: center;
+}
+
+#meso{
+    font-weight: bold;
 }
