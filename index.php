@@ -1,7 +1,7 @@
 <?php
 include'conexao.php';
 
-if(isset($_POST['login'])){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
 
@@ -15,22 +15,17 @@ if(isset($_POST['login'])){
         $_SESSION['usuario'] = $user['tipo'];
         header("Location: inicio.php");
     } else {
-        echo "
-        <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
-        <script>
-            swal({
-                title: 'Erro!',
-                text: 'E-mail ou senha incorretos.',
-                icon: 'error',
-                button: 'Tentar novamente',
-            });
-        </script>
-        <script>
-            window.location.href = 'index.php';
-        </script>
-        ";
+        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
+        echo "<script>
+                window.onload = function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'E-mail ou senha inválidos!',
+                    text: 'Tente novamente!',
+                });
+                }
+            </script>";
     }
-
 
     $stmt->close();
 }
@@ -44,6 +39,7 @@ if(isset($_POST['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal da História</title>
     <link rel="stylesheet" href="./login/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="container">
@@ -53,7 +49,7 @@ if(isset($_POST['login'])){
         </div>
         <div class="right-section">
             <h2>Crie uma conta</h2>
-            <form method="POST" action="index.php"> 
+            <form method="POST" action=""> 
                 <div class="input-container">
                     <input type="email" name="email" placeholder="E-mail" required>
                 </div>
@@ -63,8 +59,9 @@ if(isset($_POST['login'])){
                 <button type="submit" name="login">Entrar</button>
             </form>
             <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
-
+            
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
