@@ -1,136 +1,166 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* {  
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+} 
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #ffffff;
-    background-color: #2b2b2b;
-    overflow-y: scroll;
-    padding: 20px;
-}
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #ffffff; 
+    background-color: transparent; 
+    overflow-y: scroll; 
+    padding: 20px; 
+} 
 
-.video-container {
-    position: relative;
-    overflow: hidden;
-    height: 40vh;
-    z-index: -1;
-}
+.video-container { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100vh; 
+    z-index: -1; 
+    overflow: hidden; 
+} 
 
-video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
+video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+} 
 
-.container {
-    display: flex;
-    position: relative;
-    z-index: 1;
-}
+.sidebar-container { 
+    display: flex; 
+    position: relative; 
+    z-index: 1; 
+} 
 
-.sidebar {
-    width: 200px;
-    background-color: rgba(31, 31, 31, 0.9);
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: -200px;
-    height: 100vh;
-    z-index: 100;
-    transition: left 0.3s ease;
-}
+.sidebar-custom { 
+    width: 250px; 
+    background-color: #1f1f1f; 
+    padding: 20px; 
+    position: fixed; 
+    top: 0; 
+    left: -250px; 
+    height: 100vh; 
+    z-index: 100; 
+    transition: left 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+} 
 
-.sidebar.active {
-    left: 0;
-}
+.sidebar-custom.active { 
+    left: 0; 
+} 
 
-.sidebar ul {
-    list-style: none;
-}
+.sidebar-custom ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 100%; 
+    margin-top: 60px; 
+} 
 
-.sidebar a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 0;
-    display: block;
-}
+.sidebar-custom ul li { 
+    margin-bottom: 20px; 
+} 
 
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-}
+.sidebar-custom ul li a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px 0; 
+    display: block; 
+    transition: color 0.3s; 
+} 
 
-.prehistoria-section {
-    padding: 20px;
-    margin-left: 220px;
-    max-width: 800px;
-    margin: 20px auto;
-}
+.sidebar-custom ul li a:hover { 
+    color: #c0b095; 
+    cursor: pointer; 
+} 
 
-.period-background {
-    margin: 10px 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-}
+.sidebar-custom img { 
+    height: 70px; 
+    width: 130px; 
+    margin-top: 100px; 
+    margin-left: 30px; 
+} 
 
-.period {
+.colaboradores { 
+    margin-top: auto; 
+} 
+
+.menu-toggle-custom { 
+    color: #fff; 
+    font-size: 30px; 
+    cursor: pointer; 
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 1002; 
+} 
+
+.prehistoria-section-custom { 
+    padding: 20px; 
+    margin-left: 250px; 
+    max-width: 800px; 
+    margin: 20px auto; 
+} 
+
+.period-background { 
+    margin: 10px 0; 
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px; 
+} 
+
+.period img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    max-width: 100%; 
+} 
+
+.period img.mesolitico { 
+    max-height: 300px; 
+} 
+
+.period-title { 
+    font-size: 24px; 
+    margin-top: 10px; 
+} 
+
+.period-description { 
+    margin: 10px 0; 
+} 
+
+.curiosidades-section { 
+    background-color: rgba(31, 31, 31, 0.8); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+} 
+
+.period-image.mesolitico {
+    height: 360px;      
+    border-radius: 10px; 
+}
+.prehistoria-title { 
     margin-bottom: 20px;
 }
 
-.period img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
-.period-content {
-    position: relative;
-}
 
-.period-title {
-    font-size: 24px;
-    margin-top: 10px;
-}
+@media (max-width: 768px) { 
+    .sidebar-custom { 
+        display: none; 
+    } 
 
-.period-description {
-    margin: 10px 0;
-}
+    .menu-toggle-custom { 
+        display: block; 
+    } 
 
-.curiosidades-section {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.curiosidades-title {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .prehistoria-section {
-        margin-left: 0;
-    }
+    .prehistoria-section-custom { 
+        margin-left: 0; 
+    } 
 }
