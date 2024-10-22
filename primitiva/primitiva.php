@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
+$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,13 +28,13 @@
     <div class="sidebar-container">
         <nav class="sidebar-custom" id="sidebarCustom">
             <ul>
-                <li><a href="inicio.html">Início</a></li>
-                <li><a href="primitiva.html">História Primitiva</a></li>
-                <li><a href="antiga.html">História Antiga</a></li>
-                <li><a href="media.html">Idade Média</a></li>
-                <li><a href="moderna.html">Idade Moderna</a></li>
-                <li><a href="contemp.html">Idade Contemporânea</a></li>
-                <li class="colaboradores"><a href="colabo.html">Colaboradores</a></li>
+                <li><a href="../inicio/inicio.php">Início</a></li>
+                <li><a href="../primitiva/primitiva.php">História Primitiva</a></li>
+                <li><a href="../antiga/antiga.php">História Antiga</a></li>
+                <li><a href="../media/media.php">Idade Média</a></li>
+                <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
+                <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
+                <li class="colaboradores"><a href="../colabo/colabo.html">Colaboradores</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>

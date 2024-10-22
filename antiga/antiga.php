@@ -1,5 +1,12 @@
+<?php
+session_start();
+
+$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
+$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+?>
+
 <!DOCTYPE html>
-<<<<<<< HEAD
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -17,15 +24,14 @@
     <div class="container">
         <nav class="sidebar" id="sidebar">
             <ul>
-                <li><a href="../inicio/inicio.html">Início</a></li>
-                <li><a href="../primitiva/primitiva.html">História Primitiva</a></li>
-                <li><a href="../antiga/antiga.html">História Antiga</a></li>
-                <li><a href="../media/media.html">Idade Média</a></li>
-                <li><a href="../moderna/moderna.html">Idade Moderna</a></li>
-                <li><a href="../contemp/contemp.html">Idade Contemporânea</a></li>
+                <li><a href="../inicio/inicio.php">Início</a></li>
+                <li><a href="../primitiva/primitiva.php">História Primitiva</a></li>
+                <li><a href="../antiga/antiga.php">História Antiga</a></li>
+                <li><a href="../media/media.php">Idade Média</a></li>
+                <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
+                <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.html">Colaboradores</a></li>
                 <img src="../login/logo.png" alt="logo">
-=======
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,14 +55,13 @@
                 <li><a href="#">Idade Moderna</a></li>
                 <li><a href="#">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="#">Colaboradores</a></li>
->>>>>>> 81e2b2c4cfd709b3698854c06522323fc5b0c7de
+
             </ul>
         </nav>
 
         <div class="menu-toggle" id="menuToggle">
             <span>☰</span>
         </div>
-<<<<<<< HEAD
     </div>
     <div class="historiantiga-section-custom">
 
@@ -139,11 +144,9 @@
     <script src="antiga.js"></script>
 </body>
 </html>
-=======
         <main class="content">
             <div class="overlay"></div>
     <h1>História Antiga</h1>
 
 </body>
 </html>
->>>>>>> 81e2b2c4cfd709b3698854c06522323fc5b0c7de
