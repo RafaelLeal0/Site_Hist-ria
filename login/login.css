@@ -103,19 +103,24 @@ body::before {
     border-radius: 5px;
 }
 
-button[name="login"] {
+button{
     background-color: #684646;
     color: white;
     font-size: 18px;
     padding: 10px 20px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 5px;
+    font-size: medium;
+    box-shadow: 6px 6px 5px rgb(133, 133, 133);
+    
 }
 
-button[name="login"]:hover {
-    background-color: #452929;
+button{
+    background-color: #513b3b;
 }
 
 img{
@@ -123,4 +128,8 @@ img{
     width: 310px;   
     margin-left: 60px;
     margin-top: 30px;
+}
+
+.button1, .button2{
+    list-style: none;
 }
