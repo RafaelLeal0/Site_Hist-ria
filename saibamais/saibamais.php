@@ -1,8 +1,11 @@
 <?php
-// Inicia a sessão
 session_start();
 
-// Verifica se as variáveis de sessão estão definidas
+if (!isset($_SESSION['usuario'])) {
+    header("Location: index.php");
+    exit();
+}
+
 $usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
 $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 ?>
