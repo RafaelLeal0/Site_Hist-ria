@@ -1,10 +1,11 @@
 <?php
 session_start();
 
+$usuario_nome = $_SESSION['usuario_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

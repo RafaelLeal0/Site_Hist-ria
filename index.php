@@ -1,35 +1,27 @@
 <?php
-include'conexao.php';
+session_start();
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $email = $_POST['email'];
-    $senha = md5($_POST['senha']);
+include 'conexao.php';
 
-    $stmt = $connection->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
-    $stmt->bind_param("ss", $email, $senha);
-    $stmt->execute();
-    $result = $stmt->get_result();
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    $nome_digital = $_POST['user'];
+    $senha_digital = md5($_POST['password']);
 
-    if($result->num_rows > 0){
-        $user = $result->fetch_assoc();
-        $_SESSION['usuario'] = $user['tipo'];
-        header("Location: ./inicio/inicio.php");
+    $query = "SELECT * FROM usuarios WHERE usuarios = '$nome_digital' AND senha = '$senha_digital'";
+    $result = mysqli_query($connection, $query);
+
+    if ($result->num_rows > 0) {
+        $usuario_logado = $result->fetch_assoc();
+        $_SESSION['usuario_sessao'] = $usuario_logado['usuario']; // Corrigido
+        $_SESSION['tipo_sessao'] = $usuario_logado['tipo'];
+        header("Location: ../saibamais/saibamais.php");  
+        exit();
     } else {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
-        echo "<script>
-                window.onload = function() {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'E-mail ou senha inválidos!',
-                    text: 'Tente novamente!',
-                });
-                }
-            </script>";
+        header("Location: index.php");
     }
-
-    $stmt->close();
 }
 ?>
+
 
 
 <!DOCTYPE html>
