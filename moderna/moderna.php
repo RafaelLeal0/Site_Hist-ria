@@ -19,7 +19,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="idademoderna.mp4" type="video/mp4">
+            <source src="historiantiga.mp4" type="video/mp4">
         </video>
     </div>
 
