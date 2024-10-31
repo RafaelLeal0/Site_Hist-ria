@@ -31,7 +31,7 @@ $tipo_usuario = $_SESSION['tipo_sessao'];
                 <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.html">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a method="post" href="../logout.php">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
