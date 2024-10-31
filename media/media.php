@@ -1,14 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['usuario'])) {
-    header("Location: /Site_Hist-ria-1/Inicio/login.php"); // Ajuste o caminho conforme necessário
-    exit();
-}
 
-$usuario_nome = $_SESSION['usuario'];
+
+$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
 $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
