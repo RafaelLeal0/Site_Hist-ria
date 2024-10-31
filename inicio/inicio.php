@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
+    // Se o usuário não estiver logado, redireciona para a página de login
+    header("Location: ../index.php");
+    exit();
+}
 
 $usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
 $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
