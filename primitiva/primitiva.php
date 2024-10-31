@@ -35,7 +35,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.html">Colaboradores</a></li>
-                <li><a href="../logout.php"></a>Logout (Desconectar)</li>
+                <li><a href="../logout.php"></a>Logout</li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
