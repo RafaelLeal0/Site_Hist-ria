@@ -4,15 +4,15 @@ session_start();
 include 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    $nome_digital = $_POST['user'];
-    $senha_digital = md5($_POST['password']);
+    $nome_digital = $_POST['email'];
+    $senha_digital = md5($_POST['senha']);
 
-    $query = "SELECT * FROM usuarios WHERE usuarios = '$nome_digital' AND senha = '$senha_digital'";
+    $query = "SELECT * FROM usuarios WHERE email = '$email_digital' AND senha = '$senha_digital'";
     $result = mysqli_query($connection, $query);
 
     if ($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
-        $_SESSION['usuario_sessao'] = $usuario_logado['usuario']; // Corrigido
+        $_SESSION['email_sessao'] = $usuario_logado['email']; // Corrigido
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo'];
         header("Location: ../saibamais/saibamais.php");  
         exit();
