@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     if ($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
-        $_SESSION['email_sessao'] = $usuario_logado['email']; // Corrigido
+        $_SESSION['email_sessao'] = $usuario_logado['email'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo'];
         header("Location: ./saibamais/saibamais.php");  
         exit();
