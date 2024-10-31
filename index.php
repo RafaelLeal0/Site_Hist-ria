@@ -4,7 +4,7 @@ session_start();
 include 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    $nome_digital = $_POST['email'];
+    $email_digital = $_POST['email'];
     $senha_digital = md5($_POST['senha']);
 
     $query = "SELECT * FROM usuarios WHERE email = '$email_digital' AND senha = '$senha_digital'";
