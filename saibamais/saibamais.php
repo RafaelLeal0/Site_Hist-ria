@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$usuario_nome = $_SESSION['usuario_sessao'];
+$usuario_nome = $_SESSION['email_sessao'];
 $tipo_usuario = $_SESSION['tipo_sessao'];
 
 ?>
