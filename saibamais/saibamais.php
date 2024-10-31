@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['usuario_logado'])) {
+if (!isset($_SESSION['$usuario_logado'])) {
     header("location: saibamais.php");
 }else{
     header("location: ./index.php");
