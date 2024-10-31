@@ -1,10 +1,14 @@
 <?php
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+    exit();
+}
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
+$usuario_nome = $_SESSION['usuario'];
 $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +29,8 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="#">Idade Moderna</a></li>
                 <li><a href="#">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="#">Colaboradores</a></li>
+                <li><a href="../logout.php">Logout</a></li>
+                <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
 

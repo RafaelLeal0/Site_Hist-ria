@@ -1,9 +1,13 @@
 <?php
-// Inicia a sessão
 session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+    exit();
+}
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
+$usuario_nome = $_SESSION['usuario'];
 $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,6 +33,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.html">Colaboradores</a></li>
+                <li><a href="../logout.php">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
