@@ -24,7 +24,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <source src="video_inicio.mp4" type="video/mp4">
         </video>
     </div>
-    
     <div class="container">
         <nav class="sidebar" id="sidebar">
             <ul>
