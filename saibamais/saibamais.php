@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['$usuario_logado'])) {
-    header("location: saibamais.php");
-}else{
-    header("location: ./index.php");
-}
-
 $usuario_nome = $_SESSION['email_sessao'];
 $tipo_usuario = $_SESSION['tipo_sessao'];
 
