@@ -29,7 +29,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="#">Idade Média</a></li>
                 <li><a href="#">Idade Moderna</a></li>
                 <li><a href="#">Idade Contemporânea</a></li>
-                <li class="colaboradores"><a href="#">Colaboradores</a></li>
+                <li class="colaboradores"><a href="../colabo.php">Colaboradores</a></li>
                 <li><a href="../logout.php">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
