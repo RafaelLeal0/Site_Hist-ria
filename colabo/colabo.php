@@ -25,13 +25,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 </head>
 
 <body>
-
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="historiantiga.mp4" type="video/mp4">
-        </video>
-    </div>
-
     <div class="sidebar-container">
         <nav class="sidebar-custom" id="sidebarCustom">
             <ul>
@@ -118,7 +111,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             
         </div>
         <p class="name-client"> Andrey Montibeller
-            <span>Product Owner
+            <span>Desenvolvedor
             </span>
         </p>
         <div class="social-media">
@@ -178,7 +171,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             
         </div>
         <p class="name-client"> Samuel Boaz
-            <span>Desenvolvedor
+            <span>Product Owner
             </span>
         </p>
         <div class="social-media">
@@ -202,6 +195,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             </a>
         </div>
     </div>
+</div>
     <script src="script.js"></script>
 
 </body>
