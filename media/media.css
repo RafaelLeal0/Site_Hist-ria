@@ -7,36 +7,57 @@
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    overflow: hidden;
-    background-image: url(idademedia.jpg) solid transparent black;
+    overflow: auto;
+    color: #ffffff; 
+
 }
 
-.navbar{
+img{  
+    height: 55%;
+    border-radius: 10px;
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: relative;
+    justify-content: center;
+    width: 750px;
 }
-
-.navbar-logo .logo{
-    height: 50%;
-    position: absolute;
+.video-container {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 80%;
-    height: 80%;
-    object-fit: cover;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;  
 }
+video {
+    min-width: 90%;
+    min-height: 90%;
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.card {
+    background-color: rgba(13, 13, 13, 0.799);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-left: 370px;
+    height: 110%;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 40px;
+}
+
 .container {
     display: flex;
-    height: 80vh;
     position: relative;
     z-index: 1;
 }
-
 .sidebar {
     width: 250px;
     background-color: #1f1f1f;
@@ -52,17 +73,19 @@ body {
     z-index: 1001;
 }
 
+.sidebar.active {
+    left: 0;
+}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
-    width: 80%;
+    width: 100%;
     margin-top: 60px;
-    color: #ffffff;
 }
 
 .sidebar ul li {
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 .sidebar ul li a {
@@ -79,6 +102,15 @@ body {
     cursor: pointer;
 }
 
+.menu-toggle {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+}
 .colaboradores {
     margin-top: auto;
 }
@@ -105,19 +137,6 @@ body {
 
 }
 
-.content::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;;
-    height: 100%;
-    background-image: url(idademedia.jpg);
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    opacity: 0.3;
-}
 
 .overlay {
     position: absolute;
@@ -129,31 +148,34 @@ body {
     z-index: 1000;
     height: 111px;
 }
-h1{
-    justify-content: center;
-    display: flex;
-    margin-top: 10px;
-    font-size: 80px;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
 
 h2{
-    font-size: 18px;
-    padding: 20px 20px;
-    width: 50%;
-    margin-top: 50px;
-    align-items: center;
-    justify-content: center;
+    font-size: 50px;
+    width: 45%;
     display: flex;
-    margin: 5px;
-    color: white;
-    background-color: #1e1e1e;
-    box-shadow: 6px 6px 5px rgb(133, 133, 133);
+    justify-content: center;
+    box-shadow: #ffc9c9;
     font-weight: 400;
-    border-radius: 10px;
+    padding-top: 30px;
+    margin-left: 200px;
 }
 
-.texto2{
-    flex-direction: column;
+period-description{
+    margin: 10px 0;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 600px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
