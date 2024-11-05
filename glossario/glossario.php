@@ -8,13 +8,6 @@
 </head>
 <body>
 
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="barcos.mp4" type="video/mp4">
-            <source src="historiantiga.mp4" type="video/mp4">
-        </video>
-    </div>
-
     <div class="sidebar-container">
         <nav class="sidebar-custom" id="sidebarCustom">
             <ul>
@@ -28,34 +21,32 @@
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
-
         <div class="menu-toggle-custom" id="menuToggleCustom">
             <span>☰</span>
         </div>
-    </div>
-
-    <div class="glossario-container">
-        <button id="prev">◀</button>
-        <div id="carousel">
-            <!-- Os itens do carrossel serão gerados por PHP -->
-            <?php
-                $termos = ["Renascimento", "Iluminismo", "Revolução Industrial", "Colonialismo"];
-                foreach ($termos as $termo) {
-                    echo "<div class='term-item' data-term='$termo'>$termo</div>";
-                }
-            ?>
+        
+        <div class="glossario-container">
+            <button id="prev">◀</button>
+            <div id="carousel">
+                <!-- Os itens do carrossel serão gerados por PHP -->
+                <?php
+                    $termos = ["Renascimento", "Iluminismo", "Revolução Industrial", "Colonialismo"];
+                    foreach ($termos as $termo) {
+                        echo "<div class='term-item' data-term='$termo'>$termo</div>";
+                    }
+                    ?>
+            </div>
+            <button id="next">▶</button>
         </div>
-        <button id="next">▶</button>
+        
+        <div class="conteudo" id="conteudo">
+            <p>
+                A Idade Moderna foi marcada pelo Renascimento, um movimento cultural e artístico.
+                Outro destaque foi o Iluminismo, que influenciou o desenvolvimento das sociedades.
+                A Revolução Industrial e o Colonialismo também tiveram impacto global.
+            </p>
+        </div>
     </div>
-
-    <div class="conteudo" id="conteudo">
-        <p>
-            A Idade Moderna foi marcada pelo Renascimento, um movimento cultural e artístico.
-            Outro destaque foi o Iluminismo, que influenciou o desenvolvimento das sociedades.
-            A Revolução Industrial e o Colonialismo também tiveram impacto global.
-        </p>
-    </div>
-
     <script src="glossario.js"></script>
 </body>
 </html>

@@ -1,4 +1,12 @@
 // glossario.js
+const menuToggle = document.getElementById('menuToggleCustom'); 
+
+const sidebar = document.getElementById('sidebarCustom'); 
+menuToggle.addEventListener('click', function() { 
+
+    sidebar.classList.toggle('active'); 
+
+}); 
 document.addEventListener('DOMContentLoaded', function () {
     const terms = document.querySelectorAll('.term-item');
     const content = document.getElementById('conteudo');

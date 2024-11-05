@@ -6,15 +6,77 @@ body {
     padding: 20px;
 }
 
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    overflow: hidden;
-}
+
+.sidebar-container { 
+    display: flex; 
+    position: relative; 
+    z-index: 1; 
+} 
+
+.sidebar-custom { 
+    width: 250px; 
+    background-color: #292929; 
+    padding: 20px; 
+    position: fixed; 
+    top: 0; 
+    left: -250px; 
+    height: 100vh; 
+    z-index: 100; 
+    transition: left 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+} 
+
+.sidebar-custom.active { 
+    left: 0; 
+} 
+
+.sidebar-custom ul { 
+    list-style: none; 
+    padding: 0; 
+    width: 100%; 
+    margin-top: 60px; 
+} 
+
+.sidebar-custom ul li { 
+    margin-bottom: 20px; 
+} 
+
+.sidebar-custom ul li a { 
+    color: #f3f3f3; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px 0; 
+    display: block; 
+    transition: color 0.3s; 
+} 
+
+.sidebar-custom ul li a:hover { 
+    color: #d1a054; 
+    cursor: pointer; 
+} 
+
+.sidebar-custom img { 
+    height: 70px; 
+    width: 130px; 
+    margin-top: 100px; 
+    margin-left: 30px; 
+} 
+
+.colaboradores { 
+    margin-top: auto; 
+} 
+
+.menu-toggle-custom { 
+    color: #fff; 
+    font-size: 30px; 
+    cursor: pointer; 
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 1002; 
+} 
 
 .sidebar-container, .menu-toggle-custom, .moderna-section-custom {
     /* Mantenha os estilos da barra lateral */
