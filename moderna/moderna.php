@@ -56,11 +56,21 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                         <p class="period-description">
                             O Renascimento foi um movimento cultural que marcou a transição da Idade Média para a Idade Moderna, caracterizado pelo ressurgimento das artes, ciências e cultura clássica.
                         </p>
-                        <ul>
-                            <li>Valorização do conhecimento científico.</li>
-                            <li>Avanços nas artes plásticas e arquitetura.</li>
-                            <li>Desenvolvimento do humanismo.</li>
-                        </ul>
+                        <p><br><strong>Renascimento artístico</strong><br>
+Durante o Renascimento, surgiram grandes nomes, como <strong>Leonardo da Vinci</strong>, que foi matemático, físico, inventor, entre outros talentos. É o exemplo do "homem universal", com obras-primas como a <em>Mona Lisa</em> e <em>A Última Ceia</em>. <strong>Rafael Sanzio</strong> destacou-se por retratar sentimentos delicados em suas pinturas, como na <em>Madona do Prado</em>. <strong>Michelangelo</strong> foi um dos maiores escultores e pintores da época, com obras como <em>Pietá</em>, <em>David</em> e os afrescos da Capela Sistina.</p>
+
+<p><br><strong>Humanismo renascentista</strong><br>
+O Humanismo celebrou o potencial humano e sua capacidade de compreender e transformar a natureza. Surgido na Península Itálica, buscava inspiração em pensadores antigos, como Platão e Aristóteles. Esse movimento impulsionou reflexões religiosas e deu margem a novas vertentes cristãs, como o protestantismo, além de promover o estudo das línguas clássicas, como o latim e o grego.</p>
+
+<p><br><strong>Renascimento literário</strong><br>
+O período renascentista também trouxe à tona grandes nomes da literatura. <strong>Dante Alighieri</strong> escreveu a <em>Divina Comédia</em>, enquanto <strong>Maquiavel</strong> apresentou a ciência política em <em>O Príncipe</em>. <strong>Shakespeare</strong> explorou os dilemas humanos em tragédias como <em>Romeu e Julieta</em>. Outros grandes autores incluem <strong>Miguel de Cervantes</strong>, com <em>Dom Quixote</em>, e <strong>Luís de Camões</strong>, com <em>Os Lusíadas</em>.</p>
+
+<p><br><strong>Renascimento científico</strong><br>
+O Renascimento foi marcado por avanços científicos. <strong>Nicolau Copérnico</strong> desafiou a teoria geocêntrica, propondo que a Terra gira em torno do Sol. <strong>Galileu Galilei</strong> descobriu os anéis de Saturno e satélites de Júpiter, mas foi pressionado pela Igreja. Na medicina, surgiram descobertas sobre a circulação sanguínea e anatomia.</p>
+
+<p><br><strong>Renascimento comercial</strong><br>
+O aumento do comércio na Baixa Idade Média foi essencial para as inovações renascentistas. As feiras itinerantes evoluíram para os burgos, de onde surgiram os burgueses. A necessidade de troca monetária deu origem aos primeiros bancos e mudou a maneira de valorizar produtos pela quantidade de dinheiro.</p>
+
                     </div>
                 </div>
             </div>
