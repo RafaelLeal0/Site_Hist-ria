@@ -1,15 +1,30 @@
-<<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+session_start();
+
+if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
+    // Se o usuário não estiver logado, redireciona para a página de login
+    header("Location: ../index.php");
+    exit();
+}
+
+$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
+$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idade Moderna</title>
-    <link rel="stylesheet" href="glossario.css">
+    <title>Glossario</title>
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
-
-    <div class="sidebar-container">
-        <nav class="sidebar-custom" id="sidebarCustom">
+<div class="video-container">
+        
+    </div>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
             <ul>
                 <li><a href="../inicio/inicio.php">Início</a></li>
                 <li><a href="../primitiva/primitiva.php">História Primitiva</a></li>
@@ -17,31 +32,21 @@
                 <li><a href="../media/media.php">Idade Média</a></li>
                 <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
+                <li><a href="../glossario/glossario.php">Glossario</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
+                <li><a href="../logout.php">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
-        <div class="menu-toggle-custom" id="menuToggleCustom">
+
+        <div class="menu-toggle" id="menuToggle">
             <span>☰</span>
-        </div>
-
-        <div class="glossario-container">
-            <button id="prev">◀</button>
-            <div id="carousel">
-                <!-- Os itens do carrossel serão gerados por PHP -->
-                <?php
-                    $termos = ["Renascimento", "Iluminismo", "Revolução Industrial", "Colonialismo"];
-                    foreach ($termos as $termo) {
-                        echo "<div class='term-item' data-term='$termo'>$termo</div>";
-                    }
-                ?>
-            </div>
-            <button id="next">▶</button>
-        </div>
-
-
-        <div class="glossario">
-            <h2>Glossário do site</h2>
+        </div>    
+    </div>
+    <div class="card">
+        <h1>Glossario</h1>
+        <img src="../imagens/glossario.jpg" alt="photo1"> 
+        <h2>Significado dos termos</h2>
             <div class="grupo-alfa" id="grupoA">
                 <h3>A</h3>
                 <ul>
@@ -362,14 +367,8 @@
                 </ul>
                 <div class="descricao" id="Zoroastrismo">
                  <p>Uma das primeiras religiões monoteístas, iniciada na Pérsia por volta do século VI a.C. Baseada nos ensinamentos do profeta Zaratustra, ou Zoroastro, ela propõe uma luta entre o bem e o mal.</p>
-                </div>
-
-          
-            </div>
-
-        </div>
+                </div>                    
     </div>
-
-    <script src="glossario.js"></script>
+    <script src="media.js"></script>
 </body>
 </html>
