@@ -19,7 +19,7 @@ p {
 
 ul, li {
     margin-bottom: 10px;
-    list-style: none; /* Remove pontos das listas */
+    list-style: none;
 }
 
 img {
@@ -43,11 +43,11 @@ img {
 }
 
 .card {
-    background-color: rgba(13, 13, 13, 0.9); /* Fundo mais escuro para melhor contraste */
-    padding: 40px; /* Aumenta o espaçamento interno */
+    background-color: rgba(13, 13, 13, 0.9); 
+    padding: 40px; 
     border-radius: 12px;
-    max-width: 950px; /* Aumenta a largura máxima */
-    margin: 20px auto; /* Centraliza e ajusta margens */
+    max-width: 950px; 
+    margin: 20px auto; 
 }
 
 .card img {
