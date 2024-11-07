@@ -32,7 +32,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../media/media.php">Idade Média</a></li>
                 <li><a href="../moderna/moderna.php">Idade Moderna</a></li>
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
-                <li><a href="../glossario/glossario.php">Glossario</a></li>
+                <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
                 <li><a href="../logout.php">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
@@ -44,7 +44,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         </div>    
     </div>
     <div class="card">
-        <h1>Glossario</h1>
+        <h1>Glossário</h1>
         <img src="../imagens/glossario.jpg" alt="photo1"> 
         <h2>Significado dos termos</h2>
             <div class="grupo-alfa" id="grupoA">
