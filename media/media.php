@@ -2,7 +2,6 @@
 session_start();
 
 if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
-    // Se o usuário não estiver logado, redireciona para a página de login
     header("Location: ../index.php");
     exit();
 }
@@ -69,6 +68,12 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <img src="../imagens/baixa_media.jpg" alt="photo1">
         <p><br>A Baixa Idade Média, por sua vez, se estendeu dos séculos XI ao XV, e representou o período de decadência da sociedade feudal na Europa Ocidental.</h3>
         <p><br>Nesse momento, há um renascimento urbano, ou seja, das cidades, baseado principalmente no crescimento comercial e marcado pela ascensão da burguesia, camada social ligada ao comércio. É também um período de centralização política, consolidado pelo enfraquecimento dos feudos e pela formação dos Estados nacionais.</p>                         
+    </div>
+    <div class="card">
+        <h1 class="titulo3">As Invasões Bárbaras</h1>
+        <img src="../imagens/barbaros.jpg" alt="photo1">  
+        <p><br>As mudanças na Europa se iniciam, principalmente, à partir da crise do Império Romano e das invasões bárbaras. O termo bárbaro era utilizado genericamente para denominar povos, em geral de características tribais e quase nômades, que não compartilhavam a cultura greco-romana. Essa denominação incluía, por exemplo, povos germânicos como os godos, vândalos, francos, entre outros.</p>
+        <p><br>Alguns desses bárbaros estabeleceram acordos com o Império e chegaram a lutar pelo exército romano como mercenários, ou seja, mediante pagamento, estabelecendo um contato relativamente pacífico. A presença dos bárbaros em regiões do Império proporcionou, inclusive, um intercâmbio cultural nas áreas de contato entre os povos, fazendo com que bárbaros e romanos incorporassem elementos culturais uns dos outros.</p>                         
     </div>
     <div class="card">
         <h1 class="titulo3">As Invasões Bárbaras</h1>
