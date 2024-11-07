@@ -18,7 +18,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História Primitiva</title>
+    <title>Colaboradores</title>
     <link rel="stylesheet" href="colabo.css">
 
 </head>

@@ -4,16 +4,31 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #3c2929;
   font-family: Arial, sans-serif;
   height: 100vh;
   overflow: auto;
+  position: relative;
+  background-color: #2a1c1c;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../imagens/background_colaboradores.jpeg);
+  background-position: center;
+  background-size: 100%;
+  opacity: 0.5;
+  z-index: -1;
 }
 .card-client {
   display: inline-block;
