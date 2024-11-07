@@ -20,9 +20,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 </head>
 <body>
     <div class="video-container">
-        <video autoplay muted loop>
-            <source src="egitoantigo.mp4" type="video/mp4">
-        </video>
+      <img src="egipicio.jpg" alt="egipicio">
         <div class="overlay"></div>
         <div class="text-overlay">
             <h1>História Antiga</h1>
@@ -54,7 +52,8 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <div class="topic">
                     <div class="text-content">
                         <h2>Civilizações da Antiguidade</h2>
-                        <p>A história antiga abrange um período que se estende desde o surgimento da escrita, por volta de 3500 a.C., até a queda do Império Romano no Ocidente em 476 d.C. Durante esse período, diversas civilizações floresceram, como os egípcios, sumérios, gregos e romanos, cada uma deixando um legado cultural e tecnológico.</p>
+                        <p><br>A civilização antiga abrange as primeiras grandes sociedades humanas que surgiram entre 3.000 a.C. e 500 d.C., principalmente ao redor de rios como o Nilo, Tigre, Eufrates, Indo e Huang He. Essas civilizações foram essenciais para o desenvolvimento da escrita, organização social e avanços em ciência, matemática e engenharia. A escrita permitiu o registro de leis e histórias, como o Código de Hamurabi, e a religião teve grande influência política e cultural. Além disso, essas civilizações estabeleceram sistemas de governo e leis, como a monarquia divina no Egito e na China. O comércio e a troca de ideias entre regiões impulsionaram inovações e a fusão cultural, deixando um legado duradouro em práticas culturais e avanços científicos.</p>
+                        <p><br>Além disso, as civilizações antigas desenvolveram notáveis avanços em arquitetura, como as pirâmides do Egito e as muralhas da China, e em matemática, com os egípcios e babilônios contribuindo para o sistema numérico e a geometria. Esses legados continuam a influenciar a humanidade até os dias de hoje, refletindo a genialidade e a criatividade dos povos antigos.</p>
                     </div>
                     <img src="../imagens/imghist1.jpg" alt="História Antiga">
                 </div>
