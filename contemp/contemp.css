@@ -105,6 +105,11 @@ video {
     margin-left: 270px;
     margin-top: 100px;
     z-index: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 270px; 
 }
 
 .card {
@@ -112,8 +117,12 @@ video {
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    margin-left: 100px;
-    height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card img {
@@ -125,9 +134,9 @@ video {
     margin-top: 20px;
 }
 
-
 .text-content {
     margin-top: 20px;
+    text-align: center;
 }
 
 .text-content h2 {
@@ -140,7 +149,84 @@ video {
     line-height: 1.5;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        left: -200px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar.active ~ .content {
+        margin-left: 200px;
+    }
+
+    .card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .text-content h2 {
+        font-size: 22px;
+    }
+
+    .text-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+        left: -180px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+        top: 8px;
+        left: 8px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar.active ~ .content {
+        margin-left: 180px;
+    }
+
+    .card {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 20px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+}

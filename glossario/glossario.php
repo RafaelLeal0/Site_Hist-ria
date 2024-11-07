@@ -16,7 +16,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glossario</title>
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="glossario.css">
 </head>
 <body>
 <div class="video-container">

@@ -108,6 +108,11 @@ video {
     margin-left: 270px;
     margin-top: 100px;
     z-index: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 270px; 
 }
 
 .card {
@@ -128,7 +133,6 @@ video {
     margin-top: 20px;
 }
 
-
 .text-content {
     margin-top: 20px;
 }
@@ -143,10 +147,49 @@ video {
     line-height: 1.5;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-#meso{
+#meso {
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px; 
+    }
+
+    .sidebar.active {
+        left: 0; 
+    }
+
+    .content {
+        margin-left: 0; 
+    }
+
+    .sidebar.active ~ .content {
+        margin-left: 250px; 
+    }
+
+    .menu-toggle {
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .content {
+        padding: 15px;
+        margin-top: 80px;
+    }
 }

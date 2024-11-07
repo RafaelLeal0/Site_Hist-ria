@@ -47,7 +47,8 @@ img {
     padding: 40px; 
     border-radius: 12px;
     max-width: 950px; 
-    margin: 20px auto; 
+    margin: 20px auto;
+    transition: all 0.3s ease;
 }
 
 .card img {
@@ -58,7 +59,6 @@ img {
     border-radius: 10px;
     margin-top: 20px;
 }
-
 
 h3 {
     margin-top: 30px;
@@ -141,6 +141,10 @@ h3 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 0; 
+    transition: margin-left 0.3s ease; 
 }
 
 .overlay {
@@ -154,7 +158,7 @@ h3 {
     height: 111px;
 }
 
-period-description {
+.period-description {
     margin: 10px 0;
 }
 
@@ -178,6 +182,7 @@ h3 {
     margin-top: 30px;
     margin-bottom: 15px;
 }
+
 .termo {
     color: #ffffff; 
     padding: 15px; 
@@ -189,8 +194,6 @@ h3 {
     margin-left: 20px; 
     margin-right: auto; 
 }
-
-
 
 @media (max-width: 768px) {
     body {
@@ -231,12 +234,8 @@ h3 {
         left: 15px;
     }
 
-    .video-container {
-        background-position: center;
-    }
-
-    p, ul, li {
-        margin-bottom: 10px;
+    .content {
+        margin-left: 0; 
     }
 }
 
@@ -255,5 +254,33 @@ h3 {
 
     .menu-toggle {
         font-size: 24px;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-left: 0; 
+    }
+}
+
+.sidebar.active + .content {
+    margin-left: 250px; 
+}
+
+@media (max-width: 768px) {
+    .sidebar.active + .content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar.active + .content {
+        margin-left: 180px; 
     }
 }
