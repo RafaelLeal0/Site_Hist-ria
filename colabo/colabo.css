@@ -199,7 +199,11 @@ img{
     width: 1.1rem;
     fill: currentColor;
   }
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> 1d8ccfe23d5aa23018dc8ef4d0dfd4717777244e
   .tooltip-social {
     background: #262626;
     display: block;
@@ -236,3 +240,7 @@ img{
     opacity: 1;
     transform: translate(-50%, -130%);
   } 
+
+#logo {
+  margin-top: 10px;
+}
