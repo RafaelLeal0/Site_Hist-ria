@@ -2,7 +2,6 @@
 session_start();
 
 if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
-    // Se o usuário não estiver logado, redireciona para a página de login
     header("Location: ../index.php");
     exit();
 }
@@ -37,7 +36,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
                 <li><a href="../logout.php">Logout</a></li>
-                <img src="../login/logo.png" alt="logo">
+                <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
 
