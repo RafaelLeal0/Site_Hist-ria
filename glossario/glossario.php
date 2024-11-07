@@ -239,17 +239,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 
             </div>
             <div class="grupo-alfa" id="grupoC">
-                <h3>L</h3>
-                <ul>
-                    <li class="termo" data-term="Colonialismo">Colonialismo</li>
-                </ul>
-                <div class="descricao" id="Colonialismo">
-                    <p>O Colonialismo foi um sistema de controle territorial e exploração econômica, principalmente das Américas, Ásia e África.</p>
-                </div>
-                <ul>
-                
-            </div>
-            <div class="grupo-alfa" id="grupoC">
                 <h3>M</h3>
                 <ul>
                 <li class="termo" data-term="Micrólitos">Micrólitos</li>
@@ -265,28 +254,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 </div>
 
 
-                
-            </div>
-            <div class="grupo-alfa" id="grupoC">
-                <h3>N</h3>
-                <ul>
-                    <li class="termo" data-term="Colonialismo">Colonialismo</li>
-                </ul>
-                <div class="descricao" id="Colonialismo">
-                    <p>O Colonialismo foi um sistema de controle territorial e exploração econômica, principalmente das Américas, Ásia e África.</p>
-                </div>
-                <ul>
-                
-            </div>
-            <div class="grupo-alfa" id="grupoC">
-                <h3>O</h3>
-                <ul>
-                    <li class="termo" data-term="Colonialismo">Colonialismo</li>
-                </ul>
-                <div class="descricao" id="Colonialismo">
-                    <p>O Colonialismo foi um sistema de controle territorial e exploração econômica, principalmente das Américas, Ásia e África.</p>
-                </div>
-                <ul>
                 
             </div>
             <div class="grupo-alfa" id="grupoC">

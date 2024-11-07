@@ -2,12 +2,12 @@
 session_start();
 
 if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
-    header("Location: ../index.php");
+    header("Location: index.php"); 
     exit();
 }
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+$usuario_nome = $_SESSION['usuario'] ?? 'Visitante';
+$usuario_tipo = $_SESSION['tipo_sessao']; 
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +43,12 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <div class="menu-toggle" id="menuToggle">
             <span>☰</span>
         </div>
+        
         <main class="content">
             <div class="overlay"></div>
             <div class="content-text">
+                <h2>Bem-vindo(a), <?php echo htmlspecialchars($usuario_tipo); ?>!</h2>
+                
                 <h1>CONHEÇA MAIS SOBRE A HISTÓRIA</h1>
                 <a href="../saibamais/saibamais.php" class="button">SAIBA MAIS</a>
             </div>
