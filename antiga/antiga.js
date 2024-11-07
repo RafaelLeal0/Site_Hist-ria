@@ -3,4 +3,9 @@ document.getElementById('menuToggle').addEventListener('click', function() {
     sidebar.classList.toggle('active');
 });
 
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
+
+
     

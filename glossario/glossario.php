@@ -45,6 +45,13 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <div class="card">
         <h1>Glossário</h1>
         <img src="../imagens/glossario.jpg" alt="photo1"> 
+        <div class="search-bar">
+        <label for="searchTerm">Buscar termo:</label>
+        <input type="text" id="searchInput" placeholder="Digite o termo..." />
+    <button onclick="buscarTermo()">Buscar</button>
+    <button class="back-to-top" onclick="scrollToTop()">↑ Topo</button>
+
+    </div>
         <h2>Significado dos termos</h2>
             <div class="grupo-alfa" id="grupoA">
                 <h3>A</h3>
@@ -119,7 +126,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                     <p>Sistema político caracterizado pelo controle de políticos locais sobre a população rural.</p>
                 </div>
 
-
                 
             </div>
             <div class="grupo-alfa" id="grupoC">
@@ -178,7 +184,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             </div>
 
 
-
                 
             </div>
             <div class="grupo-alfa" id="grupoC">
@@ -212,7 +217,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <div class="descricao" id="Humanismo">
                     <p>Movimento intelectual do Renascimento que celebrava o potencial humano e buscava inspiração nos clássicos.</p>
                 </div>
-
 
                 
             </div>
@@ -253,7 +257,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                     <p>Refere-se aos processos de mudança radical, como a Revolução Francesa e outras revoluções importantes.</p>
                 </div>
 
-
                 
             </div>
             <div class="grupo-alfa" id="grupoC">
@@ -270,7 +273,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <div class="descricao" id="Poder autoritário">
                     <p>Características de regimes políticos que centralizam o poder e restringem as liberdades civis.</p>
                 </div>
-
 
                 
             </div>
@@ -335,6 +337,54 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                  <p>Uma das primeiras religiões monoteístas, iniciada na Pérsia por volta do século VI a.C. Baseada nos ensinamentos do profeta Zaratustra, ou Zoroastro, ela propõe uma luta entre o bem e o mal.</p>
                 </div>                    
     </div>
-    <script src="media.js"></script>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    });
+
+    function buscarTermo() {
+        const termoPesquisa = document.getElementById('searchInput').value.trim().toLowerCase();
+        const termos = document.querySelectorAll('.termo'); 
+        let encontrado = false;
+
+    termos.forEach((termo) => {
+        const termoTexto = termo.textContent.trim().toLowerCase();
+        
+        if (termoTexto === termoPesquisa) {
+            termo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            termo.style.backgroundColor = 'black'; 
+            encontrado = true;
+
+            
+            setTimeout(() => {
+                termo.style.backgroundColor = '';
+            }, 1500);
+        }
+    });
+
+    if (!encontrado) {
+        alert("Termo não encontrado no glossário.");
+    }
+    window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        }
+    
+}
+</script>
 </body>
 </html>
