@@ -184,8 +184,7 @@ img{
     width: 1.1rem;
     fill: currentColor;
   }
-  
-  /*-- Tooltip Social Media --*/
+
   .tooltip-social {
     background: #262626;
     display: block;
@@ -222,3 +221,7 @@ img{
     opacity: 1;
     transform: translate(-50%, -130%);
   } 
+
+#logo {
+  margin-top: 10px;
+}
