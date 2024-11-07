@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $usuario_logado = $result->fetch_assoc();
         $_SESSION['email_sessao'] = $usuario_logado['email'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo'];
-        header("Location: ./saibamais/saibamais.php");  
+        header("Location: ./inicio/inicio.php");  
         exit();
     } else {
         header("Location: index.php");
