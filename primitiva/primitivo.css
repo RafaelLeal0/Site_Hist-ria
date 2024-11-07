@@ -54,7 +54,6 @@ video {
     left: 0; 
 } 
 
-
 .sidebar-custom ul { 
     list-style: none; 
     padding: 0; 
@@ -106,7 +105,12 @@ video {
     margin-left: 250px; 
     max-width: 800px; 
     margin: 20px auto; 
+    transition: margin-left 0.3s ease; 
 } 
+
+.sidebar-custom.active ~ .prehistoria-section-custom { 
+    margin-left: 250px; 
+}
 
 .period-background { 
     margin: 10px 0; 
@@ -146,16 +150,19 @@ video {
     height: 360px;      
     border-radius: 10px; 
 }
+
 .prehistoria-title { 
     margin-bottom: 20px;
 }
 
-
-
 @media (max-width: 768px) { 
     .sidebar-custom { 
-        display: none; 
-    } 
+        left: -250px;
+    }
+
+    .sidebar-custom.active { 
+        left: 0; 
+    }
 
     .menu-toggle-custom { 
         display: block; 
@@ -163,5 +170,35 @@ video {
 
     .prehistoria-section-custom { 
         margin-left: 0; 
+        max-width: 100%;
+        transition: margin-left 0.3s ease;
+    }
+
+    .sidebar-custom.active ~ .prehistoria-section-custom { 
+        margin-left: 250px; 
     } 
+} 
+
+@media (max-width: 480px) { 
+    .sidebar-custom { 
+        width: 200px; 
+    }
+
+    .sidebar-custom ul li a { 
+        font-size: 16px; 
+    }
+
+    .menu-toggle-custom { 
+        font-size: 24px; 
+        top: 15px; 
+        left: 15px; 
+    }
+
+    .prehistoria-section-custom {
+        margin-left: 0;
+    }
+    
+    .sidebar-custom.active ~ .prehistoria-section-custom {
+        margin-left: 200px; 
+    }
 }
