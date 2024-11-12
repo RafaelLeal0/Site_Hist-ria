@@ -45,10 +45,17 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <div class="card">
         <h1 id="ir_topo">Glossário</h1>
         <img src="../imagens/glossario.jpg" alt="photo1"> 
-        <div class="search-bar">
-            <label for="searchTerm">Buscar termo:</label>
-            <input type="text" id="searchInput" placeholder="Digite o termo" />
-            <button onclick="buscarTermo()">Buscar</button>
+        <div class="search-bar">    
+                <div class="search-bar">
+                    <label for="searchTerm">Buscar termo:</label>
+                    <form class="form">
+                        <div class="input-container">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <input class="input" placeholder="Digite seu termo" required type="text" id="searchTerm">
+            <button type="button" onclick="buscarTermo()">Pesquisar</button>
+        </div>
+    </form>
+</div>
         </div>
     <h2>Significado dos termos</h2>
 

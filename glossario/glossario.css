@@ -29,6 +29,20 @@ img {
     margin-left: 30px;
 }
 
+svg{
+    width: 15px;
+    margin-top: 5px;
+}
+
+input{
+    border: none;
+    padding: 3px;
+    size: 50spx;
+    width: 20%;
+    height: 30px;
+    border-radius: 15px;
+}
+
 .video-container {
     background-image: url('../imagens/bliblioteca.jpg');
     background-size: cover;

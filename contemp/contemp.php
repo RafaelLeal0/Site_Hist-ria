@@ -23,7 +23,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <img src="../imagens/revolucaofrancesa.jpg" alt="Egipício">
         <div class="overlay"></div>
         <div class="text-overlay">
-            <h1>HISTÓRIA CONTEMPORÂNEA</h1>
+            <h1>IDADE CONTEMPORÂNEA</h1>
         </div>
     </div>
     

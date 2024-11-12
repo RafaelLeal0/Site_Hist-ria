@@ -20,19 +20,18 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>História Primitiva</title>
     <link rel="stylesheet" href="primitivo.css">
-
 </head>
-
 <body>
-
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="historiantiga.mp4" type="video/mp4">
-        </video>
+<div class="video-container">
+      <img src="pre-historia.jpeg" alt="primitiva">
+        <div class="overlay"></div>
+        <div class="text-overlay">
+            <h1>PRÉ HISTÓRIA</h1>
+        </div>
     </div>
 
-    <div class="sidebar-container">
-        <nav class="sidebar-custom" id="sidebarCustom">
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
             <ul>
                 <li><a href="../inicio/inicio.php">Início</a></li>
                 <li><a href="../primitiva/primitiva.php">História Primitiva</a></li>
@@ -43,81 +42,62 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
                 <li><a href="../logout.php">Logout</a></li>
-                <img src="../login/logo.png" alt="logo">
+                <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
 
-        <div class="menu-toggle-custom" id="menuToggleCustom">
+        <div class="menu-toggle" id="menuToggle">
             <span>☰</span>
-        </div>
+        </div>    
 
-        <div class="prehistoria-section-custom">
-
-
-            <div class="period">
-                <div class="period-background">
-                    <h1 class="prehistoria-title">Pré-História</h1>
-                    <img src="../imagens/primitivo.jpg" alt="Paleolítico" class="period-image">
-                    <div class="period-content">
-                    <h2 class="period-title">Paleolítico</h2>
-<p><br>O <strong>Paleolítico</strong>, também conhecido como <strong>Período da Pedra Lascada</strong>, é marcado pelo uso de pedras para criar lanças e objetos cortantes. Ele é dividido em três fases: <strong>Inferior</strong>, <strong>Médio</strong> e <strong>Superior</strong>.</p>
-
-<p><br><strong>Paleolítico Inferior (2,5 milhões a 250 mil anos a.C.)</strong><br>
-<br>O período mais antigo da <strong>Pré-História</strong>. Os primeiros hominídeos usavam pedras lascadas para fabricar ferramentas. A <strong>caça</strong> era essencial, aproveitando-se a carne para alimentação e a pele para se aquecer. Nesse período, houve a primeira <strong>divisão de trabalho</strong>: os homens caçavam e protegiam, enquanto as mulheres cuidavam das crianças e coletavam vegetais e frutos.</p>
-
-<p><br><strong>Paleolítico Médio (250 mil a 50 mil anos a.C.)</strong><br>
-<br>Durante o Paleolítico Médio, surgiram mudanças significativas, como a <strong>descoberta e o uso do fogo</strong> para iluminação, proteção e preparação de alimentos. Também começaram as primeiras <strong>práticas religiosas</strong>, especialmente nos <strong>ritos de sepultamento</strong>, com objetos e vestes que sugerem crenças sobre a morte.</p>
-
-<p><br><strong>Paleolítico Superior (50 mil a 12 mil anos a.C.)</strong><br>
-<br>Com o <strong>conhecimento acumulado</strong>, os hominídeos melhoraram suas técnicas de caça, construindo armadilhas para capturar animais maiores. As intensas <strong>mudanças climáticas</strong> da época, como a glaciação, incentivaram os grupos a permanecer mais tempo nas cavernas, onde o fogo lhes fornecia luz e aquecimento. Foi também quando a <strong>pintura rupestre</strong> tornou-se comum.</p>
-
+        <div class="content">
+            <div class="card">
+                <div class="topic">
+                    <div class="text-content">
+                        <h2>O que foi a Pré História?</h2>
+                        <p><br>A Pré-História é como conhecemos o período que acompanha a evolução humana a partir do momento que os hominídeos começaram a usar ferramentas de pedra. Encerrou-se com o surgimento da escrita, que aconteceu entre 3.500 a.C. e 3.000 a.C.</p>
+                        <p><br>A Pré-História é, basicamente, dividida entre <strong>Paleolítico, Mesolítico</strong> (período intermediário) e <strong>Neolítico.</strong> Nesses períodos, acompanhamos o desenvolvimento dos hominídeos com a elaboração de novas ferramentas, além do surgimento do homo sapiens sapiens, há cerca de 300 mil anos.</p>
                     </div>
+                    <img src="pre-historia.jpg" alt="pré-história">
                 </div>
-            </div>
-
-            <div class="period">
-                <div class="period-background">
-                    <img src="../imagens/mesolitico.jpg" alt="Mesolítico" class="period-image mesolitico">
-                    <div class="period-content">
-                    <h2 class="period-title">Mesolítico</h2>
-<p class="period-description">
-    O <strong>Mesolítico</strong>, que ocorreu aproximadamente entre <strong>13.000 a.C. e 9.000 a.C.</strong>, é uma fase de transição entre o Paleolítico e o Neolítico. Este período é caracterizado pela <strong>mudança de hábitos de vida</strong>, em que as sociedades de caçadores-coletores começaram a se adaptar a um ambiente em transformação, decorrente do fim da última Idade do Gelo.
-</p>
-<p class="period-description">
-    Durante o Mesolítico, as comunidades começaram a desenvolver <strong>novas técnicas de caça e coleta</strong>, utilizando ferramentas de pedra mais avançadas, como <strong>micrólitos</strong> (pequenas lascas de pedra) que podiam ser acopladas a hastes para criar lanças e outros utensílios.
-</p>
-<p class="period-description">
-    Além disso, é neste período que se observa o início da <strong>domesticação de animais</strong>, como cães, e o começo da <strong>produção de cerâmica e tecidos</strong>. A vida social tornou-se mais complexa, com a formação de grupos mais estáveis e as primeiras evidências de <strong>assentamentos permanentes</strong>, embora ainda baseados na caça e coleta.
-</p>
-
-                    </div>
+                
+                <div class="topic">
+                    <div class="text-content">
+                        <h2>Paleolítico</h2>
+                        <p><br>O período Paleolítico é conhecido também como <strong>Idade da Pedra Lascada</strong> e esse nome faz referência aos objetos que eram utilizados pelo homem para sua sobrevivência, que eram produzidos exatamente de pedra lascada. Esse período estendeu-se de <strong>3 milhões de anos atrás a 10.000 a.C.</strong> e foi subdividido em três fases que são <strong>Paleolítico Inferior, Médio e Superior.</strong></p>
+                        <p><br>Cada um desses períodos possui as suas particularidades e veremos um breve resumo de cada uma delas, começando pelo <strong>Paleolítico Inferior</strong>. Esse período começa a ser contado exatamente quando os hominídeos começaram a ter a habilidade de produzir as primeiras ferramentas para sua sobrevivência.</p>
+                        <p><br>Essas ferramentas foram obra do homo habilis e do homo erectus (o primeiro hominídeo a ficar numa posição totalmente ereta). Essa fase estendeu-se de <strong>3 milhões de anos atrás a 250 mil anos atrás</strong>.</p>                    </div>
+                    <img src="paleolitico.jpg" alt="primitiva">
                 </div>
-            </div>
-
-            <div class="period">
-                <div class="period-background">
-                    <img src="../imagens/neolitico.jpg" alt="Neolítico" class="period-image">
-                    <div class="period-content">
-                    <h2 class="period-title">Neolítico</h2>
-<p class="period-description">
-    O <strong>Neolítico</strong>, a última fase da Pré-História, ocorreu aproximadamente entre <strong>10.000 a.C. e 3.000 a.C.</strong> Este período é marcado pela <strong>Revolução Neolítica</strong>, que trouxe mudanças significativas na forma de vida dos seres humanos, principalmente com a invenção da <strong>agricultura</strong> e a <strong>domesticação de animais</strong>.
-</p>
-<p class="period-description">
-    As comunidades neolíticas começaram a cultivar <strong>cereais</strong>, como trigo e cevada, e a domesticar animais, como ovelhas, cabras e porcos. Isso resultou em um estilo de vida <strong>sedentário</strong>, permitindo o desenvolvimento de aldeias e, eventualmente, cidades.
-</p>
-<p class="period-description">
-    Com o aumento da <strong>produção de alimentos</strong>, a população cresceu e as sociedades se tornaram mais complexas. O surgimento da <strong>propriedade privada</strong> e a especialização do trabalho levaram ao desenvolvimento de <strong>ofícios</strong>, comércio e, por fim, à formação de estruturas sociais hierárquicas.
-</p>
-<p class="period-description">
-    O Neolítico também é conhecido pelo avanço nas <strong>técnicas de construção</strong> e na invenção da <strong>cerâmica</strong> e da <strong>tecelagem</strong>. Os seres humanos começaram a criar artefatos e obras de arte que refletiam sua vida cotidiana e crenças espirituais. A <strong>escrita</strong> também surgiu no final do Neolítico, dando início à história registrada.
-</p>
+                
+                <div class="topic">
+                    <div class="text-content">  
+                        <h2>Mesolítico</h2>
+                        <p><br>O Mesolítico é uma <strong>fase intermediária</strong> entre o Paleolítico e o Neolítico que aconteceu em determinadas partes do mundo. Os especialistas em Pré-História destacam que o Mesolítico aconteceu, sobretudo, em locais onde houve <strong>glaciações intensas</strong>. Aconteceu na <strong>Europa</strong> e em partes da <strong>Ásia</strong> e estendeu-se, aproximadamente, entre 13.000 a.C. e 9.000 a.C.</p>
+                        <p><br>Esse período marcou a decadência dos agrupamentos humanos que viviam exclusivamente da caça em detrimento daqueles que eram caçadores e coletores. Ficou marcado também pelo <strong>desenvolvimento da olaria</strong> (produção de cerâmica) e da técnica para <strong>produção de tecidos</strong>. Considera-se o fim desse período o momento em que a agricultura foi desenvolvida.</p>
+                        <p><br>Por ser um período de transição, o Mesolítico marca as inúmeras transformações ocorridas na forma de viver dos hominídeos e na formação da <strong>Terra</strong>. Nesse período, <strong>o planeta sofreu alterações climáticas e geológicas</strong> que propiciaram um ambiente favorável para que os homens saíssem das cavernas e exercessem atividades na natureza. Com o fim do período glacial, quando a temperatura era baixa, o ambiente se tornou mais ameno.</p>
+                        <p><br>Com o clima favorável, não havia mais a necessidade de os grupos humanos se deslocarem de um lugar para outro para se proteger das intempéries naturais. Isso favoreceu o <strong>início da sedentarização</strong> desses grupos, ou seja, a permanência em um único lugar para viver, o que seria comum no Neolítico, período que sucedeu o Mesolítico.</p>
 
                     </div>
+                    <img src="mesolítico.jpg" alt="primitiva">
+                </div>
+
+                <div class="topic">
+                    <div class="text-content">  
+                        <h2>Neolítico</h2>
+                        <p><br>O Neolítico é a <strong>última fase</strong> do período pré-histórico e estendeu-se de <strong>10.000 a.C. até 3.000 a.C</strong>. Essas datas (que são aproximativas) assinalam dois marcos importantes para a história do desenvolvimento humano. Primeiro, houve o <strong>surgimento da agricultura</strong>, um importante marco para a sobrevivência do homem e, por fim, houve o <strong>desenvolvimento da escrita.</strong></p>
+                        <p><br>Com o desenvolvimento da agricultura, o homem conseguiu mudar radicalmente o seu estilo de vida, uma vez que a agricultura permitia o homem fixar-se em um só local (<strong>sedentarização</strong> do homem), sobrevivendo de tudo o que ele produzia. O domínio da agricultura também levou o homem a desmatar a floresta e desenvolver campos de plantio.</p>
+                        <p><br>Junto do desenvolvimento da agricultura veio também a <strong>domesticação dos animais</strong>, que auxiliava o homem no transporte de carga, na agricultura, como animal de tração, servia de alimento e até mesmo como meio de transporte. Todas essas novidades, que possibilitaram a sedentarização humana, resultaram na formação de enormes agrupamentos humanos que, com o tempo e conforme cresciam, tornaram-se as <strong>primeiras cidades do mundo</strong>.</p>
+                        <p><br>O Neolítico também ficou marcado pelo desenvolvimento da <strong>arquitetura</strong>, o que permitia o homem construir casas de pedra e construções megalíticas. Essas últimas, até hoje, não tiveram sua finalidade muito bem esclarecidas pela arqueologia. A olaria surgiu em muitos lugares e foi aprimorada em outros.</p>
+                        <p><br>O fim do período Neolítico ficou marcado pelo desenvolvimento da <strong>metalurgia</strong>, isto é, a capacidade de produzir ferramentas a partir da fundição de metal e pelo desenvolvimento da primeira forma de escrita da humanidade, a <strong>escrita cuneiforme</strong>.</p>
+
+                    </div>
+                    <img src="neolitico.jpg" alt="primitiva">
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     <script src="script.js"></script>
 
 </body>
