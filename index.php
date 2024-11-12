@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
@@ -17,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         header("Location: ./inicio/inicio.php");  
         exit();
     } else {
+        $_SESSION['login_erro'] = "Usuário ou senha incorretos";
         header("Location: index.php");
+        exit();
     }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -34,14 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <?php if (isset($_SESSION['login_erro'])): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro de Login',
+                text: '<?php echo $_SESSION['login_erro']; ?>',
+                confirmButtonText: 'Tentar novamente'
+            });
+        </script>
+        <?php unset($_SESSION['login_erro']); ?>
+    <?php endif; ?>
     <div class="container">
         <div class="left-section">
             <h1>BEM-VINDO AO SEU PORTAL DA HISTÓRIA</h1>
             <p>Para continuar conectado, adicione seus dados para ficar por dentro das publicações!</p>
         </div>
         <div class="right-section">
-            <h2>Crie uma conta</h2>
-            <form method="POST" action=""> 
+            <h2>Entre em sua conta</h2>
+            <form method="POST" action="index.php"> 
                 <div class="input-container">
                     <input type="email" name="email" placeholder="E-mail" required>
                 </div>
@@ -51,9 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                 <button type="submit" name="login">Entrar</button>
             </form>
             <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
-            
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </body>
 </html>
