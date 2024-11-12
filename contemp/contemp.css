@@ -9,19 +9,57 @@ body {
     height: 100vh;
     overflow: auto;
     color: #ffffff;
+    background-color: #34302A;
 }
 
-img {
+#logo {
     height: 70px;
     width: 130px;
-    margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 16px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 620px; 
+    overflow: hidden;
+}
+
+.video-container img {
+    width: 100%; 
+    max-height: 620px;
+    object-fit: cover; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.text-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
     display: flex;
     position: relative;
-    z-index: 1;  
+    z-index: 1;
 }
 
 .sidebar {
@@ -78,31 +116,9 @@ img {
     z-index: 1002;
 }
 
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;  
-}
-
-video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
 .content {
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 180px;
     margin-top: 100px;
     z-index: 1;
     transition: margin-left 0.3s ease;
@@ -112,31 +128,19 @@ video {
     margin-left: 270px; 
 }
 
-.card {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
-    height: auto;
+.topic {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card img {
-    display: block;
-    width: 70%; 
-    height: auto;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-top: 20px;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-bottom: 1px solid #444;
 }
 
 .text-content {
-    margin-top: 20px;
-    text-align: center;
+    flex: 1;
+    text-align: left;
 }
 
 .text-content h2 {
@@ -149,18 +153,49 @@ video {
     line-height: 1.5;
 }
 
-h1 {
-    text-align: center;
+.topic img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 70px;
 }
 
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .sidebar {
-        width: 200px;
-        left: -200px;
+        left: -250px; 
     }
 
     .sidebar.active {
-        left: 0;
+        left: 0; 
+    }
+
+    .content {
+        margin-left: 0; 
+    }
+
+    .sidebar.active ~ .content {
+        margin-left: 250px; 
+    }
+
+    .menu-toggle {
+        left: 15px;
+    }
+
+    .topic {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topic img {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar ul li a {
+        font-size: 16px;
     }
 
     .menu-toggle {
@@ -170,63 +205,7 @@ h1 {
     }
 
     .content {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .sidebar.active ~ .content {
-        margin-left: 200px;
-    }
-
-    .card {
-        max-width: 90%;
         padding: 15px;
-    }
-
-    .text-content h2 {
-        font-size: 22px;
-    }
-
-    .text-content p {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 180px;
-        left: -180px;
-    }
-
-    .sidebar.active {
-        left: 0;
-    }
-
-    .menu-toggle {
-        font-size: 20px;
-        top: 8px;
-        left: 8px;
-    }
-
-    .content {
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .sidebar.active ~ .content {
-        margin-left: 180px;
-    }
-
-    .card {
-        max-width: 95%;
-        padding: 10px;
-    }
-
-    .text-content h2 {
-        font-size: 20px;
-    }
-
-    .text-content p {
-        font-size: 14px;
+        margin-top: 80px;
     }
 }
