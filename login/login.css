@@ -16,7 +16,7 @@ body {
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,6 +34,7 @@ body::before {
     border-radius: 10px; 
     overflow: hidden;
 }
+
 
 .left-section {
     flex: 1;
