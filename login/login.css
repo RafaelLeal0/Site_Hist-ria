@@ -133,3 +133,101 @@ img{
 .button1, .button2{
     list-style: none;
 }
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        background-position: center top;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-section h1, .left-section h2, .left-section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .left-section h2 {
+        font-size: 2em;
+    }
+
+    .left-section p {
+        font-size: 1em;
+    }
+
+    .right-section h2 {
+        font-size: 1.8em;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .input-container input {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-section h2 {
+        font-size: 1.8em;
+    }
+
+    .right-section h2 {
+        font-size: 1.6em;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .input-container input {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

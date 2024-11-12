@@ -10,9 +10,29 @@ if(isset($_POST['cadastro'])){
     $stmt->bind_param("sss", $email, $senha, $tipo);
     
     if($stmt->execute()){
-        header("Location: index.php");
+        echo "<script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Cadastro realizado com sucesso!',
+                        text: 'Você será redirecionado para a página inicial.',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'index.php';
+                        }
+                    });
+                });
+              </script>";
     } else {
-        echo "Erro ao cadastrar: " . $conn->error;
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro ao cadastrar',
+                    text: 'Houve um problema ao cadastrar o usuário. Tente novamente.',
+                    confirmButtonText: 'OK'
+                });
+              </script>";
     }
 
     $stmt->close();
@@ -24,6 +44,7 @@ if(isset($_POST['cadastro'])){
     <meta charset="UTF-8">
     <title>Cadastro</title>
     <link rel="stylesheet" href="./cadastro/cadastro.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <div class="section">
