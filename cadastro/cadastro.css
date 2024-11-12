@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Calibri;
+    font-family: Calibri, sans-serif;
     position: relative; 
     height: 100vh;
     display: flex; 
@@ -35,35 +35,18 @@ body::before {
     overflow: hidden;
 }
 
-.left-section {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    color: white; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); 
-}
-
-.left-section h1{
-    margin-left: 40px;
-    margin-top: -0px;
-}
-
-#bem{
-    margin-left: 100px;
-}
-
 .section {
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 65px;
+    align-items: center;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; 
+    border-radius: 10px;
+    width: 80%;
+    max-width: 380px;
+    margin: 20px auto;
 }
 
 .section h2 {
@@ -75,6 +58,7 @@ body::before {
 .form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .input-container {
@@ -82,32 +66,135 @@ body::before {
     margin-right: 30px;
 }
 
-.input-container input {
+.input-container label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.input-container input, .input-container select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-button[name="cadastro"] {
+button {
     background-color: #684646;
     color: white;
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
+
+    width: 100%;
+    box-shadow: none; 
 }
 
-button[name="cadastro"]:hover {
+
+button:hover {
     background-color: #452929;
 }
 
-img{
-    height: 170px;
-    width: 310px;   
-    margin-left: 60px;
-    margin-top: 30px;
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        background-position: center top;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .left-section h1, .left-section h2, .left-section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .left-section h2 {
+        font-size: 2em;
+    }
+
+    .left-section p {
+        font-size: 1em;
+    }
+
+    .right-section h2 {
+        font-size: 1.8em;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .input-container input {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-section h2 {
+        font-size: 1.8em;
+    }
+
+    .right-section h2 {
+        font-size: 1.6em;
+    }
+
+    .form {
+        padding: 15px;
+    }
+
+    .input-container input {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }

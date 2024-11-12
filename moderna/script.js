@@ -1,8 +1,6 @@
-const menuToggle = document.getElementById('menuToggleCustom'); 
+document.getElementById('menuToggle').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+});
 
-const sidebar = document.getElementById('sidebarCustom'); 
-menuToggle.addEventListener('click', function() { 
-
-    sidebar.classList.toggle('active'); 
-
-}); 
+    
