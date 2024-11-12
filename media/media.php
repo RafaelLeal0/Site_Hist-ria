@@ -19,11 +19,14 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <link rel="stylesheet" href="media.css">
 </head>
 <body>
-<div class="video-container">
-        <video autoplay muted loop>
-            <source src="idademedia-comp.mp4" type="video/mp4">
-        </video>
+    <div class="video-container">
+      <img src="idade-media.jpg" alt="idade-media">
+        <div class="overlay"></div>
+        <div class="text-overlay">
+            <h1>Idade Média</h1>
+        </div>
     </div>
+
     <div class="container">
         <nav class="sidebar" id="sidebar">
             <ul>
@@ -44,36 +47,60 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <span>☰</span>
         </div>    
     </div>
-    <div class="card">
-        <h1>Idade Média</h1>
-        <img src="idade-media.jpg" alt="photo1"> 
-        <p><br>A Idade Média é o nome do período da história localizado entre os anos 476 e 1453. A nomeação “Idade Média” é utilizada pelos historiadores
-            dentro de uma periodização que engloba quatro idades: Antiga, Média, Moderna e Contemporânea. 
-            "A Idade Média iniciou-se com a desagregação do Império Romano do Ocidente, no século V. Isso deu início a um processo de mescla da cultura latina, oriunda dos romanos, e da cultura germânica, oriunda dos povos que invadiram e instalaram-se nas terras que pertenciam a Roma, na Europa Ocidental.</p>                    
-    </div>
-    <div class="card">
-        <h1>Feudalismo</h1>
-        <img src="feudalismo.jpg" alt="photo1"> 
-        <p><br>O feudalismo foi a forma de organização social e econômica instituída na Europa Ocidental entre os séculos V a XV, durante a Idade Média. Baseava-se em grandes propriedades de terra, chamadas de feudos, que pertenciam aos senhores feudais, e a mão de obra era servil.</p>
-        <p><br> Com a queda do Império Romano do Ocidente e a invasão dos povos bárbaros entre os séculos IV e V, a Europa atravessou um período de ruralização, isto é, os moradores da cidade se deslocaram para o campo, fugindo da instabilidade provocada pela movimentação dos bárbaros.</p>                         
-    </div> 
-    <div class="card">
-        <h1 class="titulo1">Alta Idade Média</h1>
-        <img src="../imagens/alta_idade.jpg" alt="photo1">
-        <p><br>De maneira geral, a Alta Idade Média é caracterizada pelas invasões bárbaras ao Império Romano, que provocaram sua fragmentação política e territorial. Os constantes conflitos provocaram o declínio das cidades e o crescente povoamento de áreas rurais que dariam origem, alguns séculos depois, aos feudos.</p>
-        <p><br>Esse processo resultou em novos modelos de sociedade, no fim de uma estrutura política centralizada, e no fortalecimento da Igreja Católica, que era uma grande proprietária de terras.</h3>                         
-    </div>
-    <div class="card">
-        <h1>Baixa Idade Média</h1>
-        <img src="../imagens/baixa_media.jpg" alt="photo1">
-        <p><br>A Baixa Idade Média, por sua vez, se estendeu dos séculos XI ao XV, e representou o período de decadência da sociedade feudal na Europa Ocidental.</h3>
-        <p><br>Nesse momento, há um renascimento urbano, ou seja, das cidades, baseado principalmente no crescimento comercial e marcado pela ascensão da burguesia, camada social ligada ao comércio. É também um período de centralização política, consolidado pelo enfraquecimento dos feudos e pela formação dos Estados nacionais.</p>                         
-    </div>
-    <div class="card">
-        <h1 class="titulo3">As Invasões Bárbaras</h1>
-        <img src="../imagens/barbaros.jpg" alt="photo1">  
-        <p><br>As mudanças na Europa se iniciam, principalmente, à partir da crise do Império Romano e das invasões bárbaras. O termo bárbaro era utilizado genericamente para denominar povos, em geral de características tribais e quase nômades, que não compartilhavam a cultura greco-romana. Essa denominação incluía, por exemplo, povos germânicos como os godos, vândalos, francos, entre outros.</p>
-        <p><br>Alguns desses bárbaros estabeleceram acordos com o Império e chegaram a lutar pelo exército romano como mercenários, ou seja, mediante pagamento, estabelecendo um contato relativamente pacífico. A presença dos bárbaros em regiões do Império proporcionou, inclusive, um intercâmbio cultural nas áreas de contato entre os povos, fazendo com que bárbaros e romanos incorporassem elementos culturais uns dos outros.</p>                         
+    <div class="content">
+            <div class="card">
+                <div class="topic">
+                    <div class="text-content">
+                        <h2>O que foi?</h2>
+                        <p><br>A Idade Média é o nome do período da história localizado entre os anos 476 e 1453. A nomeação “Idade Média” é utilizada pelos historiadores dentro de uma periodização que engloba quatro idades: Antiga, Média, Moderna e Contemporânea. Quando nos referimos à Idade Média, geralmente referimo-nos a assuntos relacionados, direta ou indiretamente, com a Europa. </p>
+                        <p><br>A Idade Média iniciou-se com a desagregação do Império Romano do Ocidente, no século V. Isso deu início a um processo de mescla da cultura latina, oriunda dos romanos, e da cultura germânica, oriunda dos povos que invadiram e instalaram-se nas terras que pertenciam a Roma, na Europa Ocidental.</p>
+                    </div>
+                    <img src="foto1.jpg" alt="Idade Média">
+                </div>
+                
+                <div class="topic">
+                    <div class="text-content">
+                        <h2>Feudalismo</h2>
+                        <p><br>O feudalismo é o termo que usamos para toda organização social, política, cultural, ideológica e econômica que existiu na Europa durante a Idade Média. Esse conceito explica a estruturação da sociedade da Europa Ocidental, e a organização que ele representa existiu, na sua forma clássica, entre os séculos XI e XIII, aproximadamente.</p>
+                        <p><br>Do século V ao século X, o feudalismo estava em processo de estruturação, uma vez que as relações políticas características da vassalagem estavam em formação, o poder da Igreja Católica estabelecia-se aos poucos, e a ruralização e feudalização da Europa desenvolviam-se.</p>
+                        <p><br>Do século XI ao século XIII, o feudalismo estava no seu auge, sobretudo nas regiões que hoje correspondem à Alemanha, à França, e ao norte da Itália e da Inglaterra.<strong> A partir do século XIV, o sistema feudal entra em decadência</strong>, uma vez que a Europa urbanizava-se e o comércio ganhava importância.</p>
+                        <p><br>No aspecto econômico, podemos dizer que o feudalismo era um sistema baseado na produção agrícola e na exploração servil dos camponeses. Com o fim do Império Romano, a Europa Ocidental ruralizou-se e as pessoas empobrecidas passaram a estabelecer-se nas cercanias de grandes propriedades rurais, à procura de comida e proteção. Dessa situação criou-se a relação de dependência entre o senhor feudal e o camponês.</p>
+                    </div>
+                    <img src="feudalismo.jpg" alt="Idade Média">
+                </div>
+                
+                <div class="topic">
+                    <div class="text-content">  
+                        <h2>Alta Idade Média</h2>
+                        <p><br>A Alta Idade Média foi um período de instabilidade e insegurança generalizada, que se estendeu do século V ao século X. Nesse período destacaram-se:</p>
+                        <br><ul><li><strong>Os Reinos Germânicos</strong> – os germânicos eram povos estabelecidos ao longo das fronteiras do Império Romano. Os romanos os chamavam de "bárbaros", por serem estrangeiros e não falarem o latim. Os germanos formaram vários Reinos Germânicos no território romano;</li></ul>                        <br><ul><li><strong>O Reino Cristão dos Francos</strong> – o reino dos francos constituiu o reino mais poderoso da Europa Ocidental;</li></ul>
+                        <br><ul><li><strong>A Igreja e o Sacro Império</strong> – A Igreja Católica Medieval teve importante papel na sociedade. Foi nessa época que começou a organizar-se, visando zelar pela homogeneidade dos princípios da religião cristã e promover a conversão dos pagãos.</li></ul>
+                        <br><ul><li><strong>O Sistema Feudal</strong> – o feudalismo começou a se formar no século V, na Europa Ocidental, com a crise do Império Romano.</li></ul>
+                        <br><ul><li><strong>O Império Bizantino</strong> – estabelecido em Constantinopla, o Império Bizantino sobreviveu a invasões bárbaras e perdurou por todo o período medieval.</li></ul>
+                        <br><ul><li><strong>Os Árabes e o Islamismo</strong> – no Oriente Médio, na península arábica, nasceu em 630 o Islão, como resultado das Guerras Santas empreendidas por Maomé. Lentamente, o Islamismo se expandiu por um extenso território, conquistando terras da Ásia, África e Europa.</li></ul>
+
+                    </div>
+                    <img src="alta-idade-media.jpg" alt="Idade Média">
+                </div>
+
+                <div class="topic">
+                    <div class="text-content">  
+                        <h2>Baixa Idade Média</h2>
+                        <p><br>A Baixa Idade Média é o período que vai do século XI ao século XV. Destacaram-se nessa época:</p>
+                        <br><ul><li><strong>Crise do Feudalismo;</strong></li></ul>
+                        <br><ul><li><strong>As cruzadas e a expansão das sociedades cristãs;</strong></li></ul>
+                        <br><ul><li><strong>O ressurgimento urbano na Europa;</</strong></li></ul>      
+                        <br><ul><li><strong>O renascimento comercial europeu;</strong></li></ul>      
+                        <br><ul><li><strong>A formação das monarquias nacionais europeias;</strong></li></ul>      
+                        <br><ul><li><strong>A cultura medieval;</strong></li></ul>      
+                        <br><ul><li><strong>Peste Negra;</strong></li></ul>      
+                        <p><br>Durante a Baixa Idade Média, com a expansão dos turcos-otomanos no século XIV, tomando os Bálcãs e a Ásia Menor, o Império Bizantino acabou reduzido à cidade de Constantinopla.</p>
+                        <p><br>A Queda, em 1453, foi um fato histórico que marcou o fim da Idade Média na Europa. A conquista da capital bizantina pelo Império Otomano sob o comando do sultão Maomé II, marcou o fim do Império Romano no Ocidente.</p>
+                    </div>
+                    <img src="baixa-idade-media.jpg" alt="Idade Média">
+                </div>
+            </div>
+        </div>
     </div>
     <script src="media.js"></script>
 </body>
