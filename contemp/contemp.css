@@ -161,6 +161,7 @@ body {
 }
 
 /* Ajustes para dispositivos móveis */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .sidebar {
         left: -250px; 
@@ -191,6 +192,14 @@ body {
         width: 100%;
         margin-top: 20px;
     }
+
+    .text-overlay h1 {
+        font-size: 36px; /* Reduz a fonte para 768px */
+    }
+
+    .video-container img {
+        height: 100%; /* Garante que a imagem ocupe toda a altura */
+    }
 }
 
 @media (max-width: 480px) {
@@ -208,4 +217,15 @@ body {
         padding: 15px;
         margin-top: 80px;
     }
+
+    .text-overlay h1 {
+        font-size: 24px; /* Reduz ainda mais o título para telas menores */
+    }
+
+    .video-container img {
+        width: 100%; /* Garante que a imagem ocupe a largura total */
+        height: 100%; /* Garante que a imagem ocupe a altura total */
+        object-fit: cover; /* Ajusta para cobrir toda a área da seção */
+    }
 }
+
