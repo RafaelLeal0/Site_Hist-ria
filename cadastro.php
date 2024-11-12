@@ -47,7 +47,7 @@ if(isset($_POST['cadastro'])){
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div class="section">
+    <div class="section"> 
         <h2>Cadastre-se</h2>
         <form method="POST" action="cadastro.php">
             <div class="input-container">
