@@ -61,9 +61,10 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 65px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .section h2 {
@@ -75,6 +76,7 @@ body::before {
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .input-container {
@@ -99,6 +101,9 @@ button[name="cadastro"] {
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 button[name="cadastro"]:hover {
