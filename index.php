@@ -33,17 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <?php if (isset($_SESSION['login_erro'])): ?>
-        <script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Erro de Login',
-                text: '<?php echo $_SESSION['login_erro']; ?>',
-                confirmButtonText: 'Tentar novamente'
-            });
-        </script>
-        <?php unset($_SESSION['login_erro']); ?>
-    <?php endif; ?>
     <div class="container">
         <div class="left-section">
             <h1>BEM-VINDO AO SEU PORTAL DA HISTÓRIA</h1>
@@ -63,6 +52,17 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             <p>Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
         </div>
     </div>
+    <?php if (isset($_SESSION['login_erro'])): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro de Login',
+                text: '<?php echo $_SESSION['login_erro']; ?>',
+                confirmButtonText: 'Tentar novamente'
+            });
+        </script>
+        <?php unset($_SESSION['login_erro']); ?>
+    <?php endif; ?>
     
 </body>
 </html>
