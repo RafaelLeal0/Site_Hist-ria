@@ -496,3 +496,4 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
 </body>
 </html>
+<!-- correcao -->
