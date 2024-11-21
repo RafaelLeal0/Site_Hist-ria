@@ -2,12 +2,20 @@
 session_start();
 
 if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
-    header("Location: index.php"); 
+    header("Location: ../index.php");
     exit();
 }
 
-$usuario_nome = $_SESSION['usuario'] ?? 'Visitante';
-$usuario_tipo = $_SESSION['tipo_sessao']; 
+$email_usuario = $_SESSION['email_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
+
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +44,7 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../logout.php" id="logout">Logout</a></li>
                 <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
@@ -48,7 +56,7 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
         <main class="content">
             <div class="overlay"></div>
             <div class="content-text">
-                <h2>Bem-vindo(a), <?php echo htmlspecialchars($usuario_tipo); ?>!</h2>
+                <h2>Bem-vindo(a), <?php echo htmlspecialchars($tipo_usuario); ?>!</h2>
                 <a href="../perfil/perfil.php" class="perfil-button">Perfil</a>
                 <h1>CONHEÇA MAIS SOBRE A HISTÓRIA</h1>
                 <a href="../saibamais/saibamais.php" class="button">SAIBA MAIS</a>
@@ -56,5 +64,8 @@ $usuario_tipo = $_SESSION['tipo_sessao'];
         </main>
     </div>
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
 </body>
 </html>

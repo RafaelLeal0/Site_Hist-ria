@@ -46,7 +46,7 @@ function verificarPermissao($tipo_necessario) {
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../logout.php" id="logout">Logout</a></li>
                 <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
@@ -126,6 +126,8 @@ function verificarPermissao($tipo_necessario) {
 <div class="modal-overlay" id="modalOverlay"></div>
 
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

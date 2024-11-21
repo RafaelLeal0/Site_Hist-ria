@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../logout.php" id="logout">Logout</a></li>
                 <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
@@ -90,5 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
     <script src="perfil.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

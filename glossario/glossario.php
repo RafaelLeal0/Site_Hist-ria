@@ -6,8 +6,16 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
     exit();
 }
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+$email_usuario = $_SESSION['email_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
+
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +40,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
             <li><a href="../glossario/glossario.php">Glossário</a></li>
             <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-            <li><a href="../logout.php">Logout</a></li>
+            <li><a href="../logout.php" id="logout">Logout</a></li>
             <img src="../login/logo.png" alt="logo">
         </ul>
     </nav>
@@ -46,6 +54,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <h1 id="ir_topo">Glossário</h1>
         <img src="../imagens/glossario.jpg" alt="photo1">
 
+        <!-- Carrossel das letras -->
         <div class="alfabeto_carrossel-container">
     <div class="alfabeto_carrossel">
         <a href="#sectionA">A</a>
@@ -75,6 +84,8 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <a href="#sectionY">Y</a>
         <a href="#sectionZ">Z</a>
     </div>
+    <button class="carousel-nav prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="carousel-nav next" onclick="moveCarousel(1)">&#10095;</button>
 </div>
 
         <div class="search-bar">    
@@ -524,6 +535,9 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 </button>
         </a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 </html>
