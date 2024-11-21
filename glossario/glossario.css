@@ -253,6 +253,11 @@ a {
     }
   }
 
+.alfabeto_carrossel-container{
+    border-radius: 8px;
+}
+
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;

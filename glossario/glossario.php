@@ -46,7 +46,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <h1 id="ir_topo">Glossário</h1>
         <img src="../imagens/glossario.jpg" alt="photo1">
 
-        <!-- Carrossel das letras -->
         <div class="alfabeto_carrossel-container">
     <div class="alfabeto_carrossel">
         <a href="#sectionA">A</a>
@@ -76,8 +75,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         <a href="#sectionY">Y</a>
         <a href="#sectionZ">Z</a>
     </div>
-    <button class="carousel-nav prev" onclick="moveCarousel(-1)">&#10094;</button>
-    <button class="carousel-nav next" onclick="moveCarousel(1)">&#10095;</button>
 </div>
 
         <div class="search-bar">    
