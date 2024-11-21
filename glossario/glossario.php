@@ -44,7 +44,42 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
     <div class="card">
         <h1 id="ir_topo">Glossário</h1>
-        <img src="../imagens/glossario.jpg" alt="photo1"> 
+        <img src="../imagens/glossario.jpg" alt="photo1">
+
+        <!-- Carrossel das letras -->
+        <div class="alfabeto_carrossel-container">
+    <div class="alfabeto_carrossel">
+        <a href="#sectionA">A</a>
+        <a href="#sectionB">B</a>
+        <a href="#sectionC">C</a>
+        <a href="#sectionD">D</a>
+        <a href="#sectionE">E</a>
+        <a href="#sectionF">F</a>
+        <a href="#sectionG">G</a>
+        <a href="#sectionH">H</a>
+        <a href="#sectionI">I</a>
+        <a href="#sectionJ">J</a>
+        <a href="#sectionK">K</a>
+        <a href="#sectionL">L</a>
+        <a href="#sectionM">M</a>
+        <a href="#sectionN">N</a>
+        <a href="#sectionO">O</a>
+        <a href="#sectionP">P</a>
+        <a href="#sectionQ">Q</a>
+        <a href="#sectionR">R</a>
+        <a href="#sectionS">S</a>
+        <a href="#sectionT">T</a>
+        <a href="#sectionU">U</a>
+        <a href="#sectionV">V</a>
+        <a href="#sectionW">W</a>
+        <a href="#sectionX">X</a>
+        <a href="#sectionY">Y</a>
+        <a href="#sectionZ">Z</a>
+    </div>
+    <button class="carousel-nav prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="carousel-nav next" onclick="moveCarousel(1)">&#10095;</button>
+</div>
+
         <div class="search-bar">    
                 <div class="search-bar">
                     <label for="searchTerm">Buscar termo:</label>
