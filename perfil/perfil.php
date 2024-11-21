@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-        $fotoNome = 'uploads/' . basename($_FILES['foto']['name']);
+        $fotoNome = 'imagens/' . basename($_FILES['foto']['name']);
         move_uploaded_file($_FILES['foto']['tmp_name'], $fotoNome);
         $_SESSION['foto'] = $fotoNome;
     }
