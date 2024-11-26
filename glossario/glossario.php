@@ -6,8 +6,16 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
     exit();
 }
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+$email_usuario = $_SESSION['email_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
+
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +40,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
             <li><a href="../glossario/glossario.php">Glossário</a></li>
             <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-            <li><a href="../logout.php">Logout</a></li>
+            <li><a href="../logout.php" id="logout">Logout</a></li>
             <img src="../login/logo.png" alt="logo">
         </ul>
     </nav>
@@ -44,13 +52,47 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
     <div class="card">
         <h1 id="ir_topo">Glossário</h1>
-        <img src="../imagens/glossario.jpg" alt="photo1"> 
+        <img src="../imagens/glossario.jpg" alt="photo1">
+
+        <!-- Carrossel das letras -->
+        <div class="alfabeto_carrossel-container">
+    <div class="alfabeto_carrossel">
+        <a href="#sectionA">A</a>
+        <a href="#sectionB">B</a>
+        <a href="#sectionC">C</a>
+        <a href="#sectionD">D</a>
+        <a href="#sectionE">E</a>
+        <a href="#sectionF">F</a>
+        <a href="#sectionG">G</a>
+        <a href="#sectionH">H</a>
+        <a href="#sectionI">I</a>
+        <a href="#sectionJ">J</a>
+        <a href="#sectionK">K</a>
+        <a href="#sectionL">L</a>
+        <a href="#sectionM">M</a>
+        <a href="#sectionN">N</a>
+        <a href="#sectionO">O</a>
+        <a href="#sectionP">P</a>
+        <a href="#sectionQ">Q</a>
+        <a href="#sectionR">R</a>
+        <a href="#sectionS">S</a>
+        <a href="#sectionT">T</a>
+        <a href="#sectionU">U</a>
+        <a href="#sectionV">V</a>
+        <a href="#sectionW">W</a>
+        <a href="#sectionX">X</a>
+        <a href="#sectionY">Y</a>
+        <a href="#sectionZ">Z</a>
+    </div>
+    <button class="carousel-nav prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="carousel-nav next" onclick="moveCarousel(1)">&#10095;</button>
+</div>
+
         <div class="search-bar">    
                 <div class="search-bar">
                     <label for="searchTerm">Buscar termo:</label>
                     <form class="form">
                         <div class="input-container">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             <input class="input" placeholder="Digite seu termo" required type="text" id="searchTerm">
             <button type="button" onclick="buscarTermo()">Pesquisar</button>
         </div>
@@ -494,5 +536,9 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         </a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </body>
 </html>
+<!-- correcao -->

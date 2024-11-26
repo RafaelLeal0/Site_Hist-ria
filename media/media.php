@@ -6,9 +6,18 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
     exit();
 }
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+$email_usuario = $_SESSION['email_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
+
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +46,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li><a href="../glossario/glossario.php">Glossário</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../logout.php" id="logout">Logout</a></li>
                 <img id="logo" src="../login/logo.png" alt="logo">
             </ul>
         </nav>
@@ -47,6 +56,9 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         </div>    
     </div>
     <div class="content">
+            <?php if ($tipo_usuario === 'administrador') : ?>
+            <button id="addTopicBtn" class="add-topic-btn">+</button>
+            <?php endif; ?>
             <div class="card">
                 <div class="topic">
                     <div class="text-content">
@@ -101,6 +113,27 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             </div>
         </div>
     </div>
+
+    <div id="addTopicModal">
+    <h2>Adicionar Novo Tópico</h2>
+    <form id="addTopicForm" enctype="multipart/form-data" action="./add_topic.php" method="POST">
+        <label for="topicTitle">Título:</label>
+        <input type="text" id="topicTitle" name="topicTitle" required>
+        
+        <label for="topicText">Texto:</label>
+        <textarea id="topicText" name="topicText" rows="5" required></textarea>
+        
+        <label for="topicImage">Imagem:</label>
+        <input type="file" id="topicImage" name="topicImage" accept="image/*" required>
+        
+        <button type="submit">Adicionar</button>
+    </form>
+</div>
+<div class="modal-overlay" id="modalOverlay"></div>
+
     <script src="media.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

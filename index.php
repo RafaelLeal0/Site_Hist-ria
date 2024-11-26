@@ -6,14 +6,19 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $email_digital = $_POST['email'];
     $senha_digital = md5($_POST['senha']);
 
-    $query = "SELECT * FROM usuarios WHERE email = '$email_digital' AND senha = '$senha_digital'";
-    $result = mysqli_query($connection, $query);
+    $query = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+    $stmt = $connection->prepare($query);
+    $stmt->bind_param("ss", $email_digital, $senha_digital);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
+
         $_SESSION['email_sessao'] = $usuario_logado['email'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo'];
-        header("Location: ./inicio/inicio.php");  
+
+        header("Location: ./inicio/inicio.php");
         exit();
     } else {
         $_SESSION['login_erro'] = "Usuário ou senha incorretos";
@@ -22,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

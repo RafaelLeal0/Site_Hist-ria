@@ -6,9 +6,16 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
     exit();
 }
 
-$usuario_nome = $_SESSION['email_sessao'];
+$email_usuario = $_SESSION['email_sessao'];
 $tipo_usuario = $_SESSION['tipo_sessao'];
 
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +23,7 @@ $tipo_usuario = $_SESSION['tipo_sessao'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saiba Mais</title>
     <link rel="stylesheet" href="saibamais.css">
 </head>
 <body>
@@ -37,7 +44,7 @@ $tipo_usuario = $_SESSION['tipo_sessao'];
                 <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
                 <li><a href="../glossario/glossario.php">Glossario</a></li>
                 <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-                <li><a href="../logout.php">Logout</a></li>
+                <li><a href="../logout.php" id="logout">Logout</a></li>
                 <img src="../login/logo.png" alt="logo">
             </ul>
         </nav>
@@ -77,5 +84,8 @@ $tipo_usuario = $_SESSION['tipo_sessao'];
         <footer class="footer-placeholder"></footer>
 
         <script src="saibamais.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
 </body>
 </html>
