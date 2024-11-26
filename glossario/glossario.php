@@ -26,6 +26,7 @@ function verificarPermissao($tipo_necessario) {
     <title>Glossario</title>
     <link rel="stylesheet" href="glossario.css">
     <script src="glossario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <div class="video-container"></div>
@@ -526,6 +527,22 @@ function verificarPermissao($tipo_necessario) {
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    document.getElementById('logout').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    Swal.fire({
+        title: 'Você tem certeza que deseja sair?',
+        text: "Você não poderá desfazer essa ação!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, sair!',
+        cancelButtonText: 'Não, cancelar',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = event.target.href; 
+        }
+    });
+});
 </script>
 
 <footer>
@@ -541,4 +558,3 @@ function verificarPermissao($tipo_necessario) {
 
 </body>
 </html>
-<!-- correcao -->
