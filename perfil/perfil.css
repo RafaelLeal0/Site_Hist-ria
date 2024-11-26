@@ -10,7 +10,7 @@ body {
     height: 100vh;
     overflow: auto;
     color: #ffffff;
-    background-color: #34302A;
+    background-color: #ddceb8;
 }
 
 #logo{
@@ -207,4 +207,40 @@ button {
 
 button:hover {
     background-color: #A3876E;
+}
+
+.alert {
+    display: none; 
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert.show {
+    display: block;
+    opacity: 1;
+}
+
+.alert button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.alert button:hover {
+    color: #d1d1d1;
 }
