@@ -26,7 +26,6 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <h1>IDADE MÉDIA</h1>
         </div>
     </div>
-
     <div class="container">
         <nav class="sidebar" id="sidebar">
             <ul>
