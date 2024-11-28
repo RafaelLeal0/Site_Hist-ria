@@ -6,8 +6,16 @@ if (!isset($_SESSION['email_sessao']) || !isset($_SESSION['tipo_sessao'])) {
     exit();
 }
 
-$usuario_nome = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Visitante';
-$usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
+$email_usuario = $_SESSION['email_sessao'];
+$tipo_usuario = $_SESSION['tipo_sessao'];
+
+function verificarPermissao($tipo_necessario) {
+    global $tipo_usuario;
+    if ($tipo_usuario !== $tipo_necessario) {
+        header("Location: ../acesso-negado.php");
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +26,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     <title>Glossario</title>
     <link rel="stylesheet" href="glossario.css">
     <script src="glossario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <div class="video-container"></div>
@@ -32,7 +41,7 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
             <li><a href="../contemp/contemp.php">Idade Contemporânea</a></li>
             <li><a href="../glossario/glossario.php">Glossário</a></li>
             <li class="colaboradores"><a href="../colabo/colabo.php">Colaboradores</a></li>
-            <li><a href="../logout.php">Logout</a></li>
+            <li><a href="../logout.php" id="logout">Logout</a></li>
             <img src="../login/logo.png" alt="logo">
         </ul>
     </nav>
@@ -82,11 +91,10 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
 
         <div class="search-bar">    
                 <div class="search-bar">
-                    <label for="searchTerm">Buscar termo:</label>
+
                     <form class="form">
                         <div class="input-container">
-            <input class="input" placeholder="Digite seu termo" required type="text" id="searchTerm">
-            <button type="button" onclick="buscarTermo()">Pesquisar</button>
+
         </div>
     </form>
 </div>
@@ -518,6 +526,22 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    document.getElementById('logout').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    Swal.fire({
+        title: 'Você tem certeza que deseja sair?',
+        text: "Você não poderá desfazer essa ação!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, sair!',
+        cancelButtonText: 'Não, cancelar',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = event.target.href; 
+        }
+    });
+});
 </script>
 
 <footer>
@@ -528,6 +552,8 @@ $usuario_tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : 'Desconhecido';
         </a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </body>
 </html>
-<!-- correcao -->

@@ -238,3 +238,51 @@ video {
         font-size: 1rem;
     }
 }
+
+.header {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.button-perfil {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #bfa07a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button-perfil:hover {
+    background-color: #a38766;
+    color: #fff;
+}
+.perfil-button {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.perfil-button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
