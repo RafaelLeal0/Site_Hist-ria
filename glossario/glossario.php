@@ -91,11 +91,10 @@ function verificarPermissao($tipo_necessario) {
 
         <div class="search-bar">    
                 <div class="search-bar">
-                    <label for="searchTerm">Buscar termo:</label>
+
                     <form class="form">
                         <div class="input-container">
-            <input class="input" placeholder="Digite seu termo" required type="text" id="searchTerm">
-            <button type="button" onclick="buscarTermo()">Pesquisar</button>
+
         </div>
     </form>
 </div>
